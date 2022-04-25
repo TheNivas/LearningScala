@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ["sbt.Task[scala.collection.Seq[java.nio.file.Path]]",["/home/nivas/Documents/Scala/LearningScala/2 Basics of Scala/project/target/scala-2.12/sbt-1.0/zinc/inc_compile_2.12.zip"]]
+=======
+["sbt.Task[scala.collection.Seq[java.nio.file.Path]]",["/home/nivas/Documents/Scala/Learning Scala Udemy/project/target/scala-2.12/sbt-1.0/zinc/inc_compile_2.12.zip"]]
+>>>>>>> c5ccd7d23763e812c1ea61332b5c21acd1c91926

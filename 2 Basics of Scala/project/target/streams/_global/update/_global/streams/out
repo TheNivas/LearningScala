@@ -1,3 +1,8 @@
 [debug] not up to date. inChanged = true, force = false
+<<<<<<< HEAD
 [debug] Updating ProjectRef(uri("file:/home/nivas/Documents/Scala/LearningScala/2%20Basics%20of%20Scala/project/"), "root-2-basics-of-scala-build")...
 [debug] Done updating ProjectRef(uri("file:/home/nivas/Documents/Scala/LearningScala/2%20Basics%20of%20Scala/project/"), "root-2-basics-of-scala-build")
+=======
+[debug] Updating ProjectRef(uri("file:/home/nivas/Documents/Scala/Learning%20Scala%20Udemy/project/"), "learning-scala-udemy-build")...
+[debug] Done updating ProjectRef(uri("file:/home/nivas/Documents/Scala/Learning%20Scala%20Udemy/project/"), "learning-scala-udemy-build")
+>>>>>>> c5ccd7d23763e812c1ea61332b5c21acd1c91926
