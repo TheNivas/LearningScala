@@ -1,0 +1,122 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Amazon.com Inc. Java 1.8.0_322)
+[debug]       Load.loadUnit: plugins took 407.6721ms
+[debug]       Load.loadUnit: defsScala took 0.6654ms
+[debug] [Loading] Scanning directory C:\Users\Nivas\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Nivas\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 169.585 ms
+[debug]           Load.resolveProject(global-plugins) took 151.075ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Nivas\.sbt\1.0\plugins, plugins: List(<none>))) took 434.8128ms
+[debug] [Loading] Done in C:\Users\Nivas\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 482.3974ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.888ms
+[debug]     Load.loadUnit(file:/C:/Users/Nivas/.sbt/1.0/plugins/, ...) took 911.3573ms
+[debug]   Load.apply: load took 1654.2949ms
+[debug]   Load.apply: resolveProjects took 13.5558ms
+[debug]   Load.apply: finalTransforms took 141.3889ms
+[debug]   Load.apply: config.delegates took 16.2612ms
+[debug]   Load.apply: Def.make(settings)... took 1218.469999ms
+[debug]   Load.apply: structureIndex took 482.9994ms
+[debug]   Load.apply: mkStreams took 2.6726ms
+[info] loading global plugins from C:\Users\Nivas\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 9903.8336ms
+[debug]           Load.loadUnit: plugins took 61.420501ms
+[debug]           Load.loadUnit: defsScala took 0.012099ms
+[debug] [Loading] Scanning directory C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo\project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 10.650399 ms
+[debug]               Load.resolveProject(constructordemo-build) took 9.5996ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id constructordemo-build, base: C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo\project, plugins: List(<none>))) took 21.0934ms
+[debug] [Loading] Done in C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo\project, returning: (constructordemo-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 25.0655ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.0203ms
+[debug]         Load.loadUnit(file:/C:/Users/Nivas/Desktop/Work/LearningScala/ConstructorDemo/project/, ...) took 91.566799ms
+[debug]       Load.apply: load took 105.724999ms
+[debug]       Load.apply: resolveProjects took 0.225ms
+[debug]       Load.apply: finalTransforms took 84.236599ms
+[debug]       Load.apply: config.delegates took 24.387901ms
+[debug]       Load.apply: Def.make(settings)... took 172.0668ms
+[debug]       Load.apply: structureIndex took 39.1357ms
+[debug]       Load.apply: mkStreams took 0.003ms
+[info] loading project definition from C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 1354.023501ms
+[debug]     Load.loadUnit: defsScala took 0.0047ms
+[debug] [Loading] Scanning directory C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo
+[debug]       Load.loadUnit: mkEval took 18.752299ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.4996 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 3.9299ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo, plugins: List(<none>))) took 8.558499ms
+[debug] [Loading] Done in C:\Users\Nivas\Desktop\Work\LearningScala\ConstructorDemo, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 683.681499ms
+[debug]     Load.loadUnit: cleanEvalClasses took 13.6631ms
+[debug]   Load.loadUnit(file:/C:/Users/Nivas/Desktop/Work/LearningScala/ConstructorDemo/, ...) took 2052.452999ms
+[debug] Load.apply: load took 2055.4191ms
+[debug] Load.apply: resolveProjects took 0.171ms
+[debug] Load.apply: finalTransforms took 15.9758ms
+[debug] Load.apply: config.delegates took 0.6568ms
+[debug] Load.apply: Def.make(settings)... took 112.036399ms
+[debug] Load.apply: structureIndex took 42.238499ms
+[debug] Load.apply: mkStreams took 0.002999ms
+[info] set current project to ConstructorDemo (in build file:/C:/Users/Nivas/Desktop/Work/LearningScala/ConstructorDemo/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:sbt-server-3a1245b99238f5d64dcd
+[debug] Writing bsp connection file
+[info] started sbt server
