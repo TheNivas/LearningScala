@@ -418,15 +418,6 @@ object DemoHArray {
     marks.foreach(x => print(x + " "))
     println
 
-    marks -= 3 //remove 3 from marks, if found multiple it'll remove only the first one
-    println("Printing marks so far:")
-    marks.foreach(x => print(x + " "))
-    println
-
   }
 }
 ```
-Ouptut:
-![img_1.png](img_1.png)
-
-# ****END****

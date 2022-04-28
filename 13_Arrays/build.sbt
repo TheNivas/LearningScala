@@ -4,5 +4,5 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "12_Arrays"
+    name := "13_Arrays"
   )
