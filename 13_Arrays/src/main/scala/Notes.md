@@ -1,4 +1,4 @@
-# Arrays: 1
+# 13 Arrays: 1
 
 Collection of <mark>**same**</mark> datatype
 * index starts with zero always.
@@ -181,7 +181,7 @@ object DemoBArrays {
 
 ```
 *****END*****
-# Arrays 2
+# 14 Arrays 2
 Average computation explained below is not of correct way.just ignore it and focus on the examples.
 ## reduceLeft
 * gives single output

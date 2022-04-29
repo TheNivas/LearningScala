@@ -1,4 +1,4 @@
-# Traits, Value Class and Universal Trait
+# 12 Traits, Value Class and Universal Trait
 # Traits: 
 * Trait encapsulates methods and field definition
 * similar to class

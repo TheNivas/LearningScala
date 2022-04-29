@@ -1,0 +1,203 @@
+# Singleton Object , companion classes and objects and cases classes and O
+in scala we write main fn in object.
+<br>
+* scala:
+  * class
+  * object
+
+* New >> Scala Class >> Demo(object) then main fn
+```scala
+def main(args: Array[String]): Unit = {
+//........
+}
+```
+
+Reason to write in obj is : in jave main fn is like public static void main,<br>
+but in scala static isn't a keyword and object is static by default, so we write main in obj.
+
+## Singleton Object:
+```scala
+object employee {
+  val x = 2
+  val y = 4
+  print("abc")  
+}
+object classDemo {
+  def main(args: Array[String]) = {
+    val a = new employee
+    //this is wrong because employee is object not a class ,
+    // we can't make object of object
+    println(employee.x) // just call it directly
+  }
+}
+```
+Eg.
+```scala
+class DemoClassA {
+  val x = 2
+  val y = 3.5
+  println(s"x = $x and y = $y")
+  def addValue() = x + y
+}
+
+object singletonDemo {
+  def main(args: Array[String]): Unit = {
+    val demoObjectA = new DemoClassA
+    println(demoObjectA.x, demoObjectA.y)
+    val result = demoObjectA.addValue()
+    println(result)
+  }
+}
+```
+#### Demo 2
+```scala
+object DemoObjectB { // 1st note: instead of class, this is object
+  val x = 2
+  val y = 3.5
+  println(s"x = $x and y = $y")
+  def addValue() = x + y
+}
+
+object SingletonDemoB {
+  def main(args: Array[String]): Unit = {
+
+    //val demoObjectB1 = new DemoObjectB // 2nd note: if you uncomment it, it will give error as can not create obj of any obj.
+    println(DemoObjectB.x, DemoObjectB.y) // 3rd note: Access var as obj_name.var_name
+    val result = DemoObjectB.addValue() // 4th note: Access method as object_name.method()
+    println(result)
+  }
+}
+```
+while creating new instance we can use var instead of val so we can change the value in case we need it.
+<br>
+```scala
+var demoObjectB1 = new DemoClassA
+```
+eg:
+```scala
+class DemoClassC(a: Int, b: Double) {
+  val x = a
+  val y = b
+  println(s"x = $x and y = $y")
+  def addValue() = x + y
+}
+
+
+object singletonDemoC {
+  def main(args: Array[String]): Unit = {
+
+    var DemoObjectC1 = new DemoClassC(5,7.7)
+
+    println(DemoObjectC1.x, DemoObjectC1.y)
+    var result = DemoObjectC1.addValue()
+    println(result)
+
+    DemoObjectC1 = new DemoClassC(3,9.7)
+
+    println(DemoObjectC1.x, DemoObjectC1.y)
+    result = DemoObjectC1.addValue()
+    println(result)
+  }
+}
+```
+if you're creating only one object, its called singleton object.<br>
+when compiled using scalac **scalac abc.scala** it creates class file
+* val or var must be before an variable or immutable type.
+#### Behind the scene
+* got to the folder of source file
+* scalac SingleTonDemoA.scala //compiles and create class
+* once compiled it creates 2 class file i.e. one for object and one for class.
+  * DemoObjectA.class
+  * DemoObjectA$.class
+* so use java compiler(javap: prints out the packages used) or cavaj to decompile the class file
+* javap DemoObjectA => it'll give details of the file and where it compiled from.
+* or cavaj DemoObjectA
+
+## companion class and object
+* Basically name of class and object are same.
+* can use var of class in obj and var of obj in class.
+* can use var/method defined in class in obj and vice-versa.
+```scala
+class name {
+  ....
+  ....
+}
+object name {
+  .....
+  .....
+}
+```
+Eg.
+```scala
+class comapnionDemo {
+var x = 5
+  def getValue():Unit = {
+    println(s"value of x is $x and value of y = ${comapnionDemo.y}")
+  }
+}
+object comapnionDemo {
+var y = 7.3
+
+  def main(args: Array[String]): Unit = {
+    val objectForCompanionDemoClass = new comapnionDemo()
+    println(s"value of x retrieved from companion obj is ${objectForCompanionDemoClass.x}")
+    println(s"value of y when retrieved from companion obj is ${y}")
+    objectForCompanionDemoClass.getValue()
+  }
+}
+```
+In singleton object it automatically creates a class of that object. <br>
+companion class and obj: make var/method use interchangeably.
+
+## case Class:
+1. no need to write new cuz apply method is auto generated in case class.
+2. constructor paramter is val by default, therefore mutator method(method to overwrite a value)<br>
+is not generated and hence you can't change the name.
+e.g.
+```scala
+case class Car(var name: String, model: String)
+{
+  val carname = name
+  val carmodel = model
+  def printDetails():Unit = {
+    println(s"Car Name = $carname or $name and car model : $carmodel")
+  }
+}
+
+class Employee{
+  val x = 2
+  val y = 3.4
+//  println("abc")
+}
+
+object caseClassDemo{
+  def main(args: Array[String]): Unit = {
+    val bmw = Car("BMW","440") //1. no need to write new since apply method is auto generated in case class
+    bmw.printDetails()
+
+    bmw.name = "B.M.W." //2. constr param is val by default, therefore mutator method (to overwrite a value) not generated
+    //and hence you can't change the name .however if you change the constructor params to var , mutator method will be autogenerated adn you will be able to modify value in var
+    bmw.printDetails()
+
+    //3. case class autogenerate unapply method used or matching
+    bmw match  {case Car(a,b) => println(a,b) }
+
+    //4. autogenerate copy method
+    val mercedes = bmw.copy(name = "Mercedes")
+    mercedes.printDetails()
+
+    //5. equals and hashcode method autogenerated
+    println(bmw == mercedes)// compared by value not by reference
+
+    //6. tostring method is autogenerated
+    println(bmw)
+    //for class if same is done it'll show object id and hashcode
+    val employee = new Employee
+    println(employee)
+  }
+}
+
+```
+
+
+<h1 align="center"><sub>***</sub> End <sub>***</sub></h1>

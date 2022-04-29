@@ -1,4 +1,4 @@
-// Program No.: 1
+// Program No.: 1 (primary constructor)
 class DemoClass {
   val x = 2
   val y = 3
@@ -8,10 +8,9 @@ class DemoClass {
   }
   println(s"x = ${x} and y = ${y}")
   //or
-  println("x = " + x + " and y = " + y)
+//  println("x = " + x + " and y = " + y)
 
 }
-
 
 object ConstructorDemo {
   def main(args: Array[String]): Unit = {
@@ -22,5 +21,10 @@ object ConstructorDemo {
     println(s"Result of adding numbers ${demoObject1.x} and ${demoObject1.y} are: $result")
 
   }
-
+/*
+Output:
+Hello World !!
+x = 2 and y = 3
+Result of adding numbers 2 and 3 are: 5
+ */
 }
