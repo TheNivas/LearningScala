@@ -61,6 +61,8 @@ def Sum(a:Int, b: Int) = {a + b}
 |4.| end of statement semicolon(;)<br> int a = 25<br>int b = 2; |semicolon(;) is optional unless You're writing multiple lines in a line.<br>i.e.<br>val x = 5; val y = 2 |
 |5.| sum(a,b)                                                   |a.sum(b)<br> a.equals(b) or<br> a equals b |
 |6.| Diamond inheritance problem(Solved by interface in java)   |Scala avoids diamond inheritance problem using trait linearization It looks up the method implementation in the traits you extend from right to left.|
+
+
 ![img.png](img.png)
 ```scala
 trait Base {
