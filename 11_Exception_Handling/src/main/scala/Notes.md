@@ -1,4 +1,4 @@
-# Exception Handling.
+# 11 Exception Handling.
 Generally we don't want and error to occur in our program but still in case some errors are encountered then we can use exception ahandling.
 
 E.g. : 

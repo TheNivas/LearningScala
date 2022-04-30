@@ -1,4 +1,4 @@
-class DemoClassC(a: Int, b: Double) { // 1st note: instead of class, this is object
+class DemoClassC(a: Int, b: Double) {
   val x = a
   val y = b
   println(s"x = $x and y = $y")

@@ -20,5 +20,8 @@ object ConstructorDemo1 {
     val result = demoObject2.addNumber()
     println(s"Result of adding numbers ${demoObject2.x} and ${demoObject2.y} are: $result")
   }
-
+/*
+x = 2 and y = 5.4 and z = Nivas
+Result of adding numbers 2 and 5.4 are: 7.4
+ */
 }
