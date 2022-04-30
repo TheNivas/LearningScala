@@ -5,49 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34502dd7-5b54-4da3-8d0c-3395dda2421a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/13_Arrays-build.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoAArrays.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoBArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoCArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoDArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoEArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoFArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoGArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/DemoHArray.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/12_Arrays-build.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/13_Arrays.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/13_Arrays.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c7386fba2d3c4b95e6bb$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c7386fba2d3c4b95e6bb.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c7386fba2d3c4b95e6bb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cae8e5b0e3a6a3809490$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cae8e5b0e3a6a3809490.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cae8e5b0e3a6a3809490.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eb192746f6b6f5dd9a47$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eb192746f6b6f5dd9a47.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eb192746f6b6f5dd9a47.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f63d7c174149c5fb70e2$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f63d7c174149c5fb70e2.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f63d7c174149c5fb70e2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.history3" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../6_SingletonDemo/target/scala-2.13/classes/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../6_SingletonDemo/target/scala-2.13/classes/Employee.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +100,7 @@
       <updated>1651067522154</updated>
       <workItem from="1651067525682" duration="4241000" />
       <workItem from="1651121347143" duration="8118000" />
+      <workItem from="1651149299015" duration="297000" />
     </task>
     <servers />
   </component>
