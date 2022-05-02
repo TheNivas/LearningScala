@@ -55,12 +55,12 @@ def Sum (a,b) = {a + b}
 def Sum(a:Int, b: Int) = {a + b}
 ```  
 
-| |                                                            | |
-|---|------------------------------------------------------------|-----------------------|
-|3. | Always need to specify datatype<br> int c = a + b;         |No need to specify the datatype. (Static styped language) <br> val c = a + b<br> var a = a + b or <br> val c: Int = a + b<br> var c : Int = a + b<br> val =  value:never change the content of val,once assigned it'll not change<br>var = variable: changes according to our desire, can be reassigned.|
-|4.| end of statement semicolon(;)<br> int a = 25<br>int b = 2; |semicolon(;) is optional unless You're writing multiple lines in a line.<br>i.e.<br>val x = 5; val y = 2 |
-|5.| sum(a,b)                                                   |a.sum(b)<br> a.equals(b) or<br> a equals b |
-|6.| Diamond inheritance problem(Solved by interface in java)   |Scala avoids diamond inheritance problem using trait linearization It looks up the method implementation in the traits you extend from right to left.|
+| |                                                             | |
+|---|-------------------------------------------------------------|-----------------------|
+|3. | Always need to specify datatype<br> int c = a + b;          |No need to specify the datatype. (Static styped language) <br> val c = a + b<br> var a = a + b or <br> val c: Int = a + b<br> var c : Int = a + b<br> val =  value:never change the content of val,once assigned it'll not change<br>var = variable: changes according to our desire, can be reassigned.|
+|4.| end of statement semicolon(;)<br> int a = 25;<br>int b = 2; |semicolon(;) is optional unless You're writing multiple lines in a line.<br>i.e.<br>val x = 5; val y = 2 |
+|5.| sum(a,b)                                                    |a.sum(b)<br> a.equals(b) or<br> a equals b |
+|6.| Diamond inheritance problem(Solved by interface in java)    |Scala avoids diamond inheritance problem using trait linearization It looks up the method implementation in the traits you extend from right to left.|
 
 
 ![img.png](img.png)
@@ -93,7 +93,7 @@ class B extends Bar with Foo
   * can't define these words as a var or anything in a program
   * almost 50
 
-### c. println: println("Hello World !)
+### c. println: println("Hello World !")
 ### d. variables:
 ```scala
 var a = 5; a = 6 //allowed
@@ -111,6 +111,7 @@ var c = 1.23 // double by default
 Default datatype for numbers:
 * Int : 123
 * Double : 1.23
+
 For Byte and float you need to specify:
 ```scala
 //Byte
@@ -134,7 +135,7 @@ var a: Byte = 5
 var b: Byte = 7
 var c = a + b
 ```
-inthe above example output will be **c:Int = 12** cuz + fn is not defiend for Byte class
+in the above example output will be **c: Int = 12** cuz + fn is not defined for Byte class
 <br> to correct this we need to do this.
 ```scala
 var c = (a + b).toByte
@@ -220,7 +221,7 @@ def ageCal(date: Date, db : Date): Int = { //date & dob are params/args and retu
 in scala the last line of code returns the output of the fn and reutrn keyword is used very rarely.
 
 ```scala
-def addA (x: Int, y: Int):Int = {
+def addA (x: Int, y: Int): Int = {
   var z = x + y
   z // not necessary to specify return keyword
 } 
@@ -241,10 +242,10 @@ def addC(x: Int, y: Int): Int = {
 ```
 **If something is defined inside a class its method otherwise fn.**
 ## Classes and objects:
-| Class                              | Object            |
-|------------------------------------|-------------------|
-| Collection of variables and methods | instance of class |
-|                                    | Using object we can access all teh methods and variables that are defined in a class. |
+| Class                              | Object                                                                                |
+|------------------------------------|---------------------------------------------------------------------------------------|
+| Collection of variables and methods | instance of class                                                                     |
+|                                    | Using object we can access all the methods and variables that are defined in a class. |
 ```scala
 //class
 class Car {
@@ -264,7 +265,7 @@ println(bmw.roadTax) //200
 * protected: can access in the class where it is defined as well as in subclas extending the given class using inheritence.
 
 
-In the last example we only able to change/overwrite the roadTac, because it wa s public if it was private or protected tehn we wouldn't be able to do so.
+In the last example we only able to change/overwrite the roadTax, because it wa s public if it was private or protected tehn we wouldn't be able to do so.
 ```scala
 //class and object demo
 class CarB {
@@ -343,6 +344,7 @@ When an object is created, something is called and that is constructor and then 
 Two Types:
 * Primary Constructor
 * Auxilary Constructor
+
 **Demo:**
  ```scala
 class Demo {

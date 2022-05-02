@@ -12,8 +12,8 @@ def main(args: Array[String]): Unit = {
 }
 ```
 
-Reason to write in obj is : in jave main fn is like public static void main,<br>
-but in scala static isn't a keyword and object is static by default, so we write main in obj.
+Reason to write in obj is : in java main fn is like public static void main,<br>
+but in scala **static** isn't a keyword and object is static by default, so we write main in obj.
 
 ## Singleton Object:
 ```scala
@@ -136,7 +136,7 @@ var x = 5
   }
 }
 object comapnionDemo {
-var y = 7.3
+  var y = 7.3
 
   def main(args: Array[String]): Unit = {
     val objectForCompanionDemoClass = new comapnionDemo()
