@@ -3,7 +3,8 @@ When an object is created, something is called and that is constructor and then 
 Two Types:
 * Primary Constructor
 * Auxilary Constructor
-  **Demo:**
+
+**Demo:**
  ```scala
 class Demo {
   val x = 5
@@ -93,7 +94,7 @@ object ConstructorDemo2 {
     
     val demoObject22 = new DemoClass2(c = "NivaS")
 
-    val demoObject23 = new DemoClass2(b = 22.3, a = 54,c  = "NIVAS")
+    val demoObject23 = new DemoClass2(b = 22.3, a = 54, c  = "NIVAS")
 
     val result = demoObject21.addNumber()
     println(s"Result of adding numbers ${demoObject21.x} and ${demoObject21.y} are: $result")
@@ -121,6 +122,7 @@ def this (a: Int, b: Double) { // run if 2 params are passed
 }
 ```
 **if we specify all the params then ==> Primary constructor<br>if we specify zero parameter ==> auxiliary constr with 0 param.**
+
 Eg.
 ```scala
 // Program No.: 4 => Auxiliary Constructor
