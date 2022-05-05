@@ -1,6 +1,6 @@
 # Functional Programming - 1
 ## Functions:
-Group of statements for perfomain specific task.
+Group of statements for perfoming specific task.
 <br>i.e.<br>
 age (dob, year) <br>
 premium (age, sum_assured) <br>
@@ -53,7 +53,7 @@ DemoCVariableNumberOfArgs.scala
 
 #### Notes:
 1. vaiable number args. i.e. String* should always be at the end/should be the last param
-2.  you can not hae more than one * means only one variable length variable.
+2.  you can not have more than one * means only one variable length variable.
 ```scala
 //variable number of args in a function
 object DemoCVariableNumberOfArgs {
@@ -121,7 +121,7 @@ object DemoERecursiveFunction {
 ```
 <h2 align="center"><sub>*** </sub>End<sub> ***</sub></h2>
 
-# Functional Programming 2
+# Functional Programming - 2
 ### Example 1: Anonymous Function: lambda fn in another language 
 * function without a name and def keyword.
 * support first class function... Pass fn as param and define fn values.
@@ -260,4 +260,227 @@ object DemoJFunctionCallByName
   }
 }
 ```
-### Example 6 
+### Example 6 :
+```scala
+object DemoKFunctionCallByName
+{
+  def main(args: Array[String]): Unit = {
+    println(calculator(add, 2, 4))
+    println(calculator(sub, 7, 3))
+      println(calculator(mul, 7, 3))
+      println(calculator(div, 7, 3))
+      println(calculator(rem, 7, 3))
+
+  }
+
+  def calculator(m: (Int, Int) => Int, x: Int, y: Int): Int = {
+    m(x,y)
+  }
+  def add(x: Int, y: Int) = { x + y}
+  def sub(x: Int, y: Int) = x - y
+  def mul(x: Int, y: Int) = x * y
+  def div(x: Int, y: Int) = x / y
+  def rem(x: Int, y: Int) = x % y
+}
+
+```
+<h2 align="center"><sub>*** </sub>End<sub> ***</sub></h2>
+
+# Functional Programming - 3
+
+```scala
+object DemoLFunctionByValue {
+  def main(args: Array[String]): Unit = {
+    println("Main fn: " + exec(time())) // time is executed first and then exec fn, fn in parameter always executed first.
+  }
+
+  def time(): Long = {
+    println("inside the fn:")
+    return System.nanoTime()
+  }
+
+  def exec(t: Long): Long = {
+    println("Entering exec fn:")
+    println("time: " + t)
+    println("Exiting from exec fn")
+    return t
+  }
+}
+
+```
+Points to remember:
+* it will execute the  inside fn "(time())" first then execute the <br> outside fn "exec()"
+* since inside fn "time()" get executed first, it calls outside fn "exec()" with the return value of time() as a parameter of "exec()" i.e. **exec(79512772974462)**
+*  it is called **fn by value**
+
+Example 2:
+```scala
+object DemoMFunctionByName {
+    def main(args: Array[String]): Unit = {
+      println("Main fn: " + exec(time())) // time is executed first and then exec fn, fn in parameter always executed first.
+    }
+
+    def time(): Long = {
+      println("inside the fn:")
+      return System.nanoTime()
+    }
+
+    def exec(t: => Long): Long = {
+      println("Entering exec fn:")
+      println("time: " + t)
+      println("Exiting from exec fn")
+      return t
+    }
+
+}
+
+```
+Points to remember:
+* it will first execute the outside fn "exec()" and then execute the inside fn "time()" every time t is being referred.
+* since outside fn "exec()"  got executed first, it calls Inside fn "time()" using the reference variable t, it is called as **fn by Value**
+
+##### Example :3A : Partially implemented fn:
+```scala
+//Note : without partially applied fn:
+import java.util.Date
+
+object DemoNPartiallyAppliedFunction {
+  def main(args: Array[String]): Unit = {
+    var date = new Date()
+    log(date, "Hello 1")
+
+    Thread.sleep(2000)
+    log(date, msg = "Hello 2")
+
+    Thread.sleep(2000)
+    log(date, msg = "Hello 3")
+
+  } 
+  def log(date: Date, msg: String) = {
+    println(msg + " " + date)
+  }
+}
+
+```
+
+### Example :3B: both doing the same thing but using partially inplementd fn
+```scala
+//Note :  partially implemented fn:
+import java.util.Date
+
+object DemoNPartiallyAppliedFunction {
+  def main(args: Array[String]): Unit = {
+    var date = new Date()
+    val logWithDate = log(date, _:String) //partially applied fns: _ will the parameter that is expected by partially applied fn
+    //calls log fn with params: date , and string
+    logWithDate( "Hello 1 ")
+
+    Thread.sleep(2000)
+    logWithDate("Hello 2 ")
+
+    Thread.sleep(2000)
+    logWithDate("Hello 3 ")
+
+  }
+  def log(date: Date, msg: String) = {
+    println(msg + date)
+  }
+}
+```
+### Example 4: Partially implemented fn: 2
+```scala
+//Note :  partially implemented fn: 2
+object DemoOPartiallyAppliedFunction {
+  def main(args: Array[String]): Unit = {
+//    fourWheeler("Mercedes", "Car", 20000000)
+    car("Mercedes")  //or
+    fourWheeler("Ferrari", "Racing Car", 1000000)  //not using partially implemented fn
+    car("BMW")
+    truck("Tesla")
+  }
+//partially implemented fns
+  var car = fourWheeler(_:String, "car", 20000)
+
+  var truck = fourWheeler(_:String, "Truck", 500000)
+
+  /*
+  def fourWheeler(vehicleName: String, vehicleType : String, vehicleCost : Int) = {
+    println("Vehicle name is : " + vehicleName + "\nVehicle type is : " + vehicleType + " and \nvehicle cost is: " + vehicleCost)
+  }
+   */
+
+  //Converting fn definition into fn variable: (input) => {output}
+  val fourWheeler = (vehicleName: String, vehicleType: String, vehicleCost: Int) => {
+    println("Vehicle name is : " + vehicleName + "\nVehicle type is : " + vehicleType + " and \nvehicle cost is: " + vehicleCost)
+
+  }
+}
+
+```
+### Example 5: Nested fn:
+```scala
+object DemoPNestedFunction {
+  def main(args: Array[String]): Unit = {
+
+    /*
+  def printlHello(msg: String) = {
+    println("Hello " msg)
+  }
+   */
+    //fn def into  vairable
+    val printHello = (msg: String) => println("Hello " + msg)
+    printHello("World !")
+    printHello("!ND!A")
+
+  }
+}
+
+```
+### Exaample 6: Nested Function 2
+```scala
+object DemoQNestedFunction {
+  def main(args: Array[String]): Unit = {
+    printHello("World")
+    printHello("!ND1A")
+  }
+  def printHello(str: String) =  { //3 level of fn
+
+    def printSomeThing(str1: String, str2 : String) = {
+      printSomethingElse(str1 + " " + str2)
+
+      def printSomethingElse(finalString: String) = {
+        println(finalString)
+      }
+    }
+    printSomeThing("Hello", str)
+  }
+}
+```
+
+### Example 7:nNested fn 3
+```scala
+object DemoRNestedFunction {
+  def main(args: Array[String]): Unit = {
+    println(factorial(5))
+    println(factorial(7))
+    println(factorial(0))
+  }
+  def factorial(i: Int): Int= {
+
+    def fact(x: Int, prevResult: Int): Int = {
+      if (x <= 1)
+        prevResult
+      else
+        fact(x - 1, x * prevResult)
+    }
+    var z = fact(i, 1)
+    return z
+  }
+}
+```
+
+### Example 8: Scurrying fn:
+* instead of passing multiple parameter separated with commas, simply pass multiple params in separate bracket.
+
+##### Functioning chaining(result you get is chian of fn)
+= fn currying (separate params in diff bracket) + partially applied fn (i.e. use _)
