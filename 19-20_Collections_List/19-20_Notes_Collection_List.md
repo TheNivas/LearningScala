@@ -313,3 +313,97 @@ scala>
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
 
+# D:20 Collection: List 2
+### Fill: creating list with same data
+```scala
+scala> val colors = List.fill(5) ("Red")
+val colors: List[String] = List(Red, Red, Red, Red, Red)
+                                                                                
+scala> val colors = List.fill(5) (5.65)
+val colors: List[Double] = List(5.65, 5.65, 5.65, 5.65, 5.65)
+```
+
+### tabulate: you can apply some fn to generate elements list:
+work on index on following way:
+
+```scala
+scala> val numbers = List.tabulate(5) (x => x * 2)
+val numbers: List[Int] = List(0, 2, 4, 6, 8)
+                                                                                
+scala> val square = List.tabulate(5) (x => x * x)
+val square: List[Int] = List(0, 1, 4, 9, 16)
+     
+```
+
+#### 3 * 3 matrix multiplication. 
+| Rows\Column | 0   | 1   | 2   |
+|-------------|-----|-----|-----|
+| 0           | 0   | 0   | 0   |
+| 1           | 0   | 1   | 2   |
+| 2           | 0   | 2   | 4   |
+```scala
+scala> val matrix = List.tabulate(3,3) ((r,c) => r * c)
+val matrix: List[List[Int]] = List(List(0, 0, 0), List(0, 1, 2), List(0, 2, 4))
+```
+
+### Reverse: reverse the order of the list
+```scala
+                                                                                
+scala> val numbers = List(0,1,2,4,5,6,8,10,99)
+val numbers: List[Int] = List(0, 1, 2, 4, 5, 6, 8, 10, 99)
+                                                                                
+scala> numbers.reverse
+val res0: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
+  
+//Note: contents of list will be change, list is immutable
+scala> numbers
+val res1: List[Int] = List(0, 1, 2, 4, 5, 6, 8, 10, 99)
+                                                          
+//can assigned as a new var though.
+scala> val reversenumbers = numbers.reverse
+val reversenumbers: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
+                                                                                
+scala> reversenumbers
+val res2: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
+
+//to sort in ascending order
+scala> numbers.sorted
+val res3: List[Int] = List(0, 1, 2, 4, 5, 6, 8, 10, 99)
+
+//to sort in descending order
+scala> numbers.sorted(Ordering.Int.reverse)
+val res4: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
+
+```
+### SortBy fn explore....? check on internet....
+### complex sortBy ex:
+```scala
+                                                                                
+scala> case class car (val name: String, val cost: Int)
+// defined case class car
+                                                                                
+scala> val car1 = ("Mercedes", 70000)
+val car1: (String, Int) = (Mercedes,70000)
+                                                                                
+scala> val car2 = ("BMW", 50000)
+val car2: (String, Int) = (BMW,50000)
+                                                                                
+scala> val car3 = ("Jaguar", 89900)
+val car3: (String, Int) = (Jaguar,89900)
+                                                                                
+scala> val cars = List(car1, car2, car3)
+val cars: List[(String, Int)] = List((Mercedes,70000), (BMW,50000), (Jaguar,89900))
+
+//sort all the cars by ascending order of the cost of the car
+cars.sortBy(_.cost)
+
+//in reverse
+cars.sortBy(_.cost).reverse
+
+//ascending oreder of the name
+cars.sortBy(_.name)
+```
+### sortwith
+```scala
+
+```
