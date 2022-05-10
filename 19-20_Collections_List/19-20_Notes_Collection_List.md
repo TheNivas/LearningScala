@@ -376,34 +376,207 @@ val res4: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
 
 ```
 ### SortBy fn explore....? check on internet....
+![img.png](img.png)
+```scala
+
+scala> val numbers = List(0,1,2,5,9,1,25,18)
+val numbers: List[Int] = List(0, 1, 2, 5, 9, 1, 25, 18)
+
+scala> numbers.sortBy(x=>x)
+val res0: List[Int] = List(0, 1, 1, 2, 5, 9, 18, 25)
+
+scala> numbers.sortBy(x=>x).reverse
+val res1: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
+```
+
 ### complex sortBy ex:
+![img_1.png](img_1.png)
 ```scala
-                                                                                
-scala> case class car (val name: String, val cost: Int)
-// defined case class car
-                                                                                
-scala> val car1 = ("Mercedes", 70000)
-val car1: (String, Int) = (Mercedes,70000)
-                                                                                
-scala> val car2 = ("BMW", 50000)
-val car2: (String, Int) = (BMW,50000)
-                                                                                
-scala> val car3 = ("Jaguar", 89900)
-val car3: (String, Int) = (Jaguar,89900)
-                                                                                
-scala> val cars = List(car1, car2, car3)
-val cars: List[(String, Int)] = List((Mercedes,70000), (BMW,50000), (Jaguar,89900))
+scala> case class cars(val name:String, val cost:Int)
+// defined case class cars
 
-//sort all the cars by ascending order of the cost of the car
-cars.sortBy(_.cost)
+scala> val car1 = cars("Mercedes", 50000)
+val car1: cars = cars(Mercedes,50000)
 
-//in reverse
-cars.sortBy(_.cost).reverse
+scala> val car2 = cars("BMW", 80000)
+val car2: cars = cars(BMW,80000)
 
-//ascending oreder of the name
-cars.sortBy(_.name)
+scala> val car3 = cars("Jaquar", 70000)
+val car3: cars = cars(Jaquar,70000)
+
+//making list of all cars
+scala> val listOfCars = List(car1,car2,car3)
+val listOfCars: List[cars] = List(cars(Mercedes,50000), cars(BMW,80000), cars(Jaquar,70000))
+
+//sort by cost
+scala> listOfCars.sortBy(c => c.cost)
+val res0: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
+
+//sort by cost in reverse
+scala> listOfCars.sortBy(c => c.cost).reverse
+val res1: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
+
+//shorthand notation
+scala> listOfCars.sortBy(_.cost)
+val res2: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
+
+scala> listOfCars.sortBy(_.cost).reverse
+val res3: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
+
+scala> listOfCars.sortBy(_.name)
+val res4: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
+
+scala> listOfCars.sortBy(_.name).sortBy(_.cost)
+val res5: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
+
+scala>
+
 ```
+![img_2.png](img_2.png)
+
 ### sortwith
+![img_3.png](img_3.png)
 ```scala
+scala> val numbers = List(0,1,2,5,9,1,25,18)
+val numbers: List[Int] = List(0, 1, 2, 5, 9, 1, 25, 18)
+
+//Ascending order
+scala> numbers.sortWith((x,y) => x<y)
+val res0: List[Int] = List(0, 1, 1, 2, 5, 9, 18, 25)
+
+//Descending order
+scala> numbers.sortWith((x,y) => x>y)
+val res1: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
+
+
+//shorthand notation
+scala> numbers.sortWith(_ > _)
+val res2: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
+```
+### Complex
+![img_4.png](img_4.png)
+```scala
+scala> case class cars(val name:String, val cost:Int)
+// defined case class cars
+
+scala> val car1 = cars("Mercedes", 50000)
+val car1: cars = cars(Mercedes,50000)
+
+scala> val car2 = cars("BMW", 80000)
+val car2: cars = cars(BMW,80000)
+
+scala> val car3 = cars("Jaquar", 70000)
+val car3: cars = cars(Jaquar,70000)
+
+scala> val listOfCars = List(car1,car2,car3)
+val listOfCars: List[cars] = List(cars(Mercedes,50000), cars(BMW,80000), cars(Jaquar,70000))
+
+//sort with price
+scala> listOfCars.sortWith((c1,c2) => c1.cost < c2.cost)
+val res3: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
+
+//sort with price descending order
+scala> listOfCars.sortWith((c1,c2) => c1.cost > c2.cost)
+val res4: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
+
+//shorthand
+scala> listOfCars.sortWith(_.cost > _.cost)
+val res5: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
+
+scala> listOfCars.sortWith(_.name > _.name)
+val res6: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
+```
+### More Complex
+![img_5.png](img_5.png)
+```scala
+scala> def sortingLogic (c1:cars, c2: cars) = {
+  | println(c1.cost + " " + c1.name)
+  | println(c2.cost + " " + c2.name)
+  | c1.cost > c2.cost
+  | }
+there were 2 deprecation warning(s); re-run with -deprecation for details
+def sortingLogic(c1: cars, c2: cars): Boolean
+
+scala> listOfCars.sortWith(sortingLogic)
+80000 BMW
+  50000 Mercedes
+  70000 Jaquar
+  80000 BMW
+  80000 BMW
+  70000 Jaquar
+  70000 Jaquar
+  50000 Mercedes
+  70000 Jaquar
+  80000 BMW
+  80000 BMW
+  70000 Jaquar
+val res0: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
 
 ```
+## Mutalbe List Buffer:
+1. import: `import scala.collection.mutable.ListBuffer`
+![img_6.png](img_6.png)
+```scala
+
+scala> import scala.collection.mutable.ListBuffer
+
+//2. create an empty ListBuffer of Int
+scala> val numbers = new ListBuffer[Int]()
+val numbers: scala.collection.mutable.ListBuffer[Int] = ListBuffer()
+
+scala> numbers
+val res1: scala.collection.mutable.ListBuffer[Int] = ListBuffer()
+
+//adding 
+scala> numbers += 1
+val res2: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1)
+
+scala> numbers += 2
+val res3: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2)
+
+scala> numbers += 4
+val res4: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4)
+
+scala> numbers += 16
+val res5: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4, 16)
+
+//adding more than one element failed so use bracket
+scala> numbers += 16,23,22,15,87,0
+-- Error: ----------------------------------------------------------------------
+1 |numbers += 16,23,22,15,87,0
+  |             ^
+  |             end of statement expected but ',' found
+
+//adding more than one element using bracket
+scala> numbers += (16,23,22,15,87,0)
+there were 1 deprecation warning(s); re-run with -deprecation for details
+val res6: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4, 16, 16, 23, 22, 15, 87, 0)
+
+//removing 16 form the listbuffer
+scala> numbers -= 16
+val res7: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4, 16, 23, 22, 15, 87, 0)
+
+//converting to list
+scala> val numberList = numbers.toList
+val numberList: List[Int] = List(1, 2, 4, 16, 23, 22, 15, 87, 0)
+
+//can't add items in list like list buffer
+scala> numberList += 4
+-- [E008] Not Found Error: -----------------------------------------------------
+1 |numberList += 4
+  |^^^^^^^^^^^^^
+  |value += is not a member of List[Int] - did you mean numberList.!=?
+1 error found
+
+```
+* apply map to list buffer
+```scala
+scala> numbers.map(x => x*x)
+val res8: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 4, 16, 256, 529, 484, 225, 7569, 0)
+
+scala> numbers
+val res9: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4, 16, 23, 22, 15, 87, 0)
+
+scala>
+```
+<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
