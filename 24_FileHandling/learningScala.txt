@@ -1,0 +1,7 @@
+Scala is a modern multi-paradigm programming language designed to express common programming patterns in a concise, elegant, and type-safe way.
+ It seamlessly integrates features of object-oriented and functional languages.
+
+Scala is object-oriented.
+Scala is a pure object-oriented language in the sense that every value is an object. 
+Types and behaviors of objects are described by classes and traits. 
+Classes can be extended by subclassing, and by using a flexible mixin-based composition mechanism as a clean replacement for multiple inheritance.
