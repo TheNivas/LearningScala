@@ -1,4 +1,4 @@
-# Conditional Statements and Loops
+# 9B Conditional Statements and Loops
 ## if statement:
 ```scala
 val x = 7
@@ -121,6 +121,6 @@ while (i < 10){
  // i += 1
 }
 ```
-****End****
+<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
 
 

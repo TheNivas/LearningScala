@@ -191,4 +191,4 @@ object DemoFSerialization extends App{
 ## Deserialization:
 Not in mood to study..
 
-## End
+<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

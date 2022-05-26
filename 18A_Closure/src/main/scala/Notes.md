@@ -1,4 +1,4 @@
-# Closure
+# 18A Closure
 closures are simple fn wherein variables are defined outside fn definition.
 ## Example:
 ### As a fn
@@ -99,4 +99,4 @@ object DemoCClosure {
 
 
 
-<h2 align="center"><sub>***</sub> End <sub>***</sub></h2>
+<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

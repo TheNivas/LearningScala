@@ -339,6 +339,12 @@ object alternativeMain extends App {
   for (i <- 25 to 30) println(s" $i days !")
 }
 ```
+
+<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
+
+
+
+
 # Day 5: Constructors:
 When an object is created, something is called and that is constructor and then constructor creates an instance of the class.<br>
 Two Types:
