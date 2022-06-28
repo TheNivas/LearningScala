@@ -1,4 +1,5 @@
-# D:19 Collection: List 1
+# Day 19:: Collection: List 1
+
 * similar to Array {collection of elements}
 * immutable (called tuples in python) (can't change contents inside a list)
 * linked list is used to connect elements. `var num = List(2,4,6,8)`
@@ -7,6 +8,7 @@
 * DisAdv: slow random access
 
 1. Creating list in scala:
+
 ```scala
 scala> val colors: List[String] = List("Red", "Green", "Blue", "Yellow")
 val colors: List[String] = List(Red, Green, Blue, Yellow)
@@ -44,7 +46,9 @@ scala> val matrix = List (
 val matrix: List[List[Double]] = List(List(1.1, 2.0, 3.0), List(4.0, 5.2, 6.0), List(7.0, 8.0, 9.0, 1.0))
 
 ```
-#### List is immutable program:
+
+## List is immutable program
+
 ```scala
 scala> val evenNumbers = List(2,4,6,8,10)
 val evenNumbers: List[Int] = List(2, 4, 6, 8, 10)
@@ -66,7 +70,9 @@ scala> evenNumbers(1) = 7
 scala> 
 
 ```
-#### Array is mutable:
+
+### Array is mutable
+
 ```scala
                                                                                                                                                                                                                    
 scala> val evenNumbers = Array(2,4,6,8,10)
@@ -86,7 +92,9 @@ scala> evenNumbers
 val res6: Array[Int] = Array(2, 4, 6, 8, 9)
 
 ```
-#### Another way to make list 
+
+#### Another way to make list
+
 ```scala
 scala> val colors: List[String] = List("Red", "Green", "Blue", "Yellow")
 val colors: List[String] = List(Red, Green, Blue, Yellow)
@@ -106,7 +114,9 @@ val matrix: List[List[Int]] = List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))
 ```
 
 ## Different ways of defining a list
-### Range:
+
+### Range
+
 ```scala
 
 scala> val numbers = List.range(1,50)
@@ -127,7 +137,8 @@ val evenNumbers: List[Int] = List(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25,
 scala> val oddNumbers = (1 to 100 by 2).toList
 val oddNumbers: List[Int] = List(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99)
 ```
-### Simple operations on List:
+
+### Simple operations on List
 
 ```scala
 scala> val colors: List[String] = List("Red", "Green", "Blue", "Yellow")
@@ -208,7 +219,9 @@ scala> colors = colors.distinct
 colors: List[String] = List(Violet, Red, Green, Blue, Yellow, Orange)
 
 ```
+
 ### iterate over list
+
 ```scala
 //in old languages
 scala> for (color <- colors) println(color)
@@ -259,9 +272,11 @@ scala> numbers.foreach(x => println(x * 2))
 46.0
 
 ```
+
 ### list as immutable dt
+
 ```scala
-                                                                                                                                                                                                                   
+
 scala> var colors: List[String] = List("Red", "Green", "Blue", "Yellow")
 var colors: List[String] = List(Red, Green, Blue, Yellow)
                                                                                                                                                                                                                    
@@ -276,10 +291,10 @@ scala> colors(2) = "Red"
   |^^^^^^
   |value update is not a member of List[String] - did you mean List[String].updated?
 1 error found
-                                                                                                                                                                                                                   
-scala> 
+                                                             
 
 ```
+
 ```scala
 //some fns
 //colors with length == 3
@@ -309,12 +324,12 @@ scala>
 
 ```
 
-
-
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
 
-# D:20 Collection: List 2
+## Day20:: Collection: List 2
+
 ### Fill: creating list with same data
+
 ```scala
 scala> val colors = List.fill(5) ("Red")
 val colors: List[String] = List(Red, Red, Red, Red, Red)
@@ -323,7 +338,8 @@ scala> val colors = List.fill(5) (5.65)
 val colors: List[Double] = List(5.65, 5.65, 5.65, 5.65, 5.65)
 ```
 
-### tabulate: you can apply some fn to generate elements list:
+### tabulate: you can apply some fn to generate elements list
+
 work on index on following way:
 
 ```scala
@@ -335,18 +351,21 @@ val square: List[Int] = List(0, 1, 4, 9, 16)
      
 ```
 
-#### 3 * 3 matrix multiplication. 
+#### 3 * 3 matrix multiplication
+
 | Rows\Column | 0   | 1   | 2   |
 |-------------|-----|-----|-----|
 | 0           | 0   | 0   | 0   |
 | 1           | 0   | 1   | 2   |
 | 2           | 0   | 2   | 4   |
+
 ```scala
 scala> val matrix = List.tabulate(3,3) ((r,c) => r * c)
 val matrix: List[List[Int]] = List(List(0, 0, 0), List(0, 1, 2), List(0, 2, 4))
 ```
 
 ### Reverse: reverse the order of the list
+
 ```scala
                                                                                 
 scala> val numbers = List(0,1,2,4,5,6,8,10,99)
@@ -375,8 +394,11 @@ scala> numbers.sorted(Ordering.Int.reverse)
 val res4: List[Int] = List(99, 10, 8, 6, 5, 4, 2, 1, 0)
 
 ```
-### SortBy fn explore....? check on internet....
+
+### SortBy fn explore....? check on internet....?
+
 ![img.png](img.png)
+
 ```scala
 
 scala> val numbers = List(0,1,2,5,9,1,25,18)
@@ -389,8 +411,10 @@ scala> numbers.sortBy(x=>x).reverse
 val res1: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
 ```
 
-### complex sortBy ex:
+### complex sortBy ex
+
 ![img_1.png](img_1.png)
+
 ```scala
 scala> case class cars(val name:String, val cost:Int)
 // defined case class cars
@@ -432,10 +456,13 @@ val res5: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,8
 scala>
 
 ```
+
 ![img_2.png](img_2.png)
 
 ### sortwith
+
 ![img_3.png](img_3.png)
+
 ```scala
 scala> val numbers = List(0,1,2,5,9,1,25,18)
 val numbers: List[Int] = List(0, 1, 2, 5, 9, 1, 25, 18)
@@ -453,8 +480,11 @@ val res1: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
 scala> numbers.sortWith(_ > _)
 val res2: List[Int] = List(25, 18, 9, 5, 2, 1, 1, 0)
 ```
+
 ### Complex
+
 ![img_4.png](img_4.png)
+
 ```scala
 scala> case class cars(val name:String, val cost:Int)
 // defined case class cars
@@ -486,8 +516,11 @@ val res5: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,5
 scala> listOfCars.sortWith(_.name > _.name)
 val res6: List[cars] = List(cars(Mercedes,50000), cars(Jaquar,70000), cars(BMW,80000))
 ```
+
 ### More Complex
+
 ![img_5.png](img_5.png)
+
 ```scala
 scala> def sortingLogic (c1:cars, c2: cars) = {
   | println(c1.cost + " " + c1.name)
@@ -513,9 +546,12 @@ scala> listOfCars.sortWith(sortingLogic)
 val res0: List[cars] = List(cars(BMW,80000), cars(Jaquar,70000), cars(Mercedes,50000))
 
 ```
-## Mutalbe List Buffer:
+
+## Mutalbe List Buffer
+
 1. import: `import scala.collection.mutable.ListBuffer`
 ![img_6.png](img_6.png)
+
 ```scala
 
 scala> import scala.collection.mutable.ListBuffer
@@ -569,7 +605,9 @@ scala> numberList += 4
 1 error found
 
 ```
+
 * apply map to list buffer
+
 ```scala
 scala> numbers.map(x => x*x)
 val res8: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 4, 16, 256, 529, 484, 225, 7569, 0)
@@ -577,6 +615,6 @@ val res8: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 4, 16, 256, 5
 scala> numbers
 val res9: scala.collection.mutable.ListBuffer[Int] = ListBuffer(1, 2, 4, 16, 23, 22, 15, 87, 0)
 
-scala>
 ```
+
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

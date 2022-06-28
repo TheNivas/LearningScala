@@ -1,7 +1,7 @@
-# Collections: 1
+# Day 18B: Collections: 1
+
 * library / package / class which can be imported.
 * powerful and rich set collections: ArrayBuffer, List, Set, Map....
-
 
 1. collection is just a class, which someone already defined.
 2. some collections:
@@ -9,12 +9,11 @@
    2. strict:  when a var is defined it actually occupies memory in RAM
 3. collection can be of two types: mutable and immutable.
 
-The following figure shows all collections in package scala.collection. <br>
-These are all high-level abstract classes or traits, which generally have <br>
+The following figure shows all collections in package scala.collection.  
+These are all high-level abstract classes or traits, which generally have  
 mutable as well as immutable implementations.
 
-
-![img_2.png](img_2.png)<br>
+![img_2.png](img_2.png)  
 
 * Traversable: Traverse through collection. list(1,2,3,4,5....) , forward, backword traversal
 * Iterable: Access element one by one.
@@ -22,7 +21,8 @@ mutable as well as immutable implementations.
 * set: have some uniques elements and have no duplicates.
 * map: key value pair. map {"Name" => "Dell", "LOC" => "India"}
 
-## Mutable and Immutable:
+## Mutable and Immutable
+
 | Immutable                                                                          | Mutable                                                                           |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | we CAN NOT change the contents of collections.                                     | we can change teh contents of collections.                                        |
@@ -31,10 +31,15 @@ mutable as well as immutable implementations.
 | ![img.png](img.png)                                                                | ![img_1.png](img_1.png)                                                           |
 | i.e: List                                                                          | i.e: ArrayBuffer, seq                                                             |
 |                                                                                    |                                                                                   |
+
 ### Interview Qn: Diff b/w HashSet and Hashmap
-## Practicals:
+
+## Practicals
+
 ### Mutables Collection:  `import scala.collection.mutable._`
+
 1. val:
+
 ```scala
 scala> val x = scala.collection.mutable.ArrayBuffer(2,4,6,8)
 val x: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(2, 4, 6, 8)
@@ -58,7 +63,9 @@ scala> x = x.map(i => i + 1)
 longer explanation available when compiling with `-explain`
 1 error found
 ```
+
 2. if var:
+
 ```scala
 scala> var x = scala.collection.mutable.ArrayBuffer(2,4,6,8)
 var x: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(2, 4, 6, 8)
@@ -72,9 +79,10 @@ x: scala.collection.mutable.ArrayBuffer[Int] = ArrayBuffer(3, 5, 7, 9, 11)
 ```
 
 ### Immutables Collection: `import scala.collection.immutable._`
+
 1. val
+
 ```scala
-                                                                                                                                                                                                                   
 scala> val x = scala.collection.immutable.List(2,4,6,8)
 val x: List[Int] = List(2, 4, 6, 8)
 //since list is immutable we can't add an element bcz += is an operator(behind the scenes it is actually a method) to add new elements.
@@ -87,7 +95,9 @@ scala> x += 10
   |value += is not a member of List[Int] - did you mean x.!=?
 1 error found
 ```
+
 But what if we still want to add element: add into new list, can't do it in the same list.
+
 ```scala
 scala> val y = x :+ 10
 val y: List[Int] = List(2, 4, 6, 8, 10)
@@ -112,7 +122,9 @@ scala> var z = x.map(i => i + 1)
 var z: List[Int] = List(3, 5, 7, 9)
 
 ```
+
 2. var
+
 ```scala
                                                                                                                                                                                                                    
 scala> var x = scala.collection.immutable.List(2,4,6,8)
@@ -131,7 +143,5 @@ scala> x = x.map( i => i+1 ) // this is completely changing the var value
 x: List[Int] = List(3, 5, 7, 9)
                                                                                                                                                                                                                    
 ```
-
-
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

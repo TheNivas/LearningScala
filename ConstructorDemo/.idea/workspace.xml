@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b28ced1a-b64c-4ac6-817b-a5fe70770af9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.bsp/sbt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_8_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/modules/ConstructorDemo-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/modules/ConstructorDemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/scala_compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/build.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$45f69132c8c317b2d720$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$45f69132c8c317b2d720.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$45f69132c8c317b2d720.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$507299b4475dc3862925$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$507299b4475dc3862925.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$507299b4475dc3862925.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$81529a259cf3d3f24de7$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$81529a259cf3d3f24de7.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$81529a259cf3d3f24de7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$c9bc94f69272f95f9b52$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$c9bc94f69272f95f9b52.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/config-classes/$c9bc94f69272f95f9b52.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/scala-2.12/sbt-1.0/sync/copy-resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/_global/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/csrConfiguration/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/csrProject/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/ivyConfiguration/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/ivySbt/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/moduleSettings/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/projectDescriptors/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/scalaCompilerBridgeScope/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/_global/update/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/_global/_global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/bspReporter/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/compile/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/internalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/internalDependencyClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/scalacOptions/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/unmanagedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/unmanagedClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/compile/unmanagedJars/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/internalDependencyClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/unmanagedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/unmanagedClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/project/target/streams/runtime/unmanagedJars/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/src/main/scala/ConstructorDemo.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/src/main/scala/constructorDemo1.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/src/main/scala/constructorDemo2.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/src/main/scala/constructorDemo3.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/.history3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo2$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo3$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/ConstructorDemo3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/DemoClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/DemoClass1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/DemoClass2$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/DemoClass2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/classes/DemoClass3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/update/update_cache_2.13/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/scala-2.13/update/update_cache_2.13/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/_global/dumpStructure/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/csrConfiguration/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/csrProject/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/ivyConfiguration/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/ivySbt/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/moduleSettings/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/projectDescriptors/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/update/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/updateClassifiers/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/scalacOptions/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/unmanagedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/unmanagedClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/compile/unmanagedJars/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/runtime/unmanagedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/runtime/unmanagedClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/runtime/unmanagedJars/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/test/externalDependencyClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/test/managedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/test/unmanagedClasspath/_global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/test/unmanagedClasspath/_global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5 ConstructorDemo/target/streams/test/unmanagedJars/_global/streams/export" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="27Q8Vxkssd95ZinvacydC1rXrC5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Application.ConstructorDemo">
+    <configuration name="ConstructorDemo" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ConstructorDemo" />
+      <module name="ConstructorDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConstructorDemo1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ConstructorDemo1" />
+      <module name="ConstructorDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConstructorDemo2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ConstructorDemo2" />
+      <module name="ConstructorDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConstructorDemo3" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ConstructorDemo3" />
+      <module name="ConstructorDemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ConstructorDemo" />
+        <item itemvalue="Application.ConstructorDemo3" />
+        <item itemvalue="Application.ConstructorDemo2" />
+        <item itemvalue="Application.ConstructorDemo1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b28ced1a-b64c-4ac6-817b-a5fe70770af9" name="Changes" comment="" />
+      <created>1649240979919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649240979919</updated>
+      <workItem from="1649318974556" duration="726000" />
+      <workItem from="1649319792752" duration="652000" />
+      <workItem from="1649320584352" duration="236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/ConstructorDemo.scala</url>
+          <line>17</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/constructorDemo2.scala</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

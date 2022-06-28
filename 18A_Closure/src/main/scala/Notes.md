@@ -1,7 +1,11 @@
-# 18A Closure
+# Day 18A: Closure
+
 closures are simple fn wherein variables are defined outside fn definition.
-## Example:
+
+## Example
+
 ### As a fn
+
 ```scala
 //closures are simple fn wherein variables are defined outside fn definition.
 
@@ -14,7 +18,9 @@ object DemoAclosure {
   }
 }
 ```
+
 ### As a variable
+
 ```scala
 object DemoBClosureAsVar {
   def main(args: Array[String]): Unit = {
@@ -27,16 +33,20 @@ object DemoBClosureAsVar {
 //not defined inside fn body
 
 ```
+
 If variable (eg. factor) is defined outside the fn body, It is called closure
 
-### Not a closure:
+### Not a closure
+
 ```scala
     //below fn is not a closure, cuz var factor1 is defined in fn body, not outside of fn.
   var multiplier1 = (x: Int) => {
     var factor1 = 1
     x * factor1
 ```
-### Ex: Even or Odd 
+
+### Ex: Even or Odd
+
 ```scala
 //even or odd no.
 object DemoCClosure {
@@ -46,7 +56,6 @@ object DemoCClosure {
     println(evenOrOdd(2))
     println(evenOrOdd(3))
     println(evenOrOdd(12))
-
 
   }
 // In fn definition
@@ -66,7 +75,9 @@ object DemoCClosure {
 }
 
 ```
+
 ### Even/Odd example 2
+
 ```scala
 
 //even or odd no.
@@ -77,7 +88,6 @@ object DemoCClosure {
     println(evenOrOdd(isEven1,2))
     println(evenOrOdd(isEven1,3))
     println(evenOrOdd(isEven1,12))
-
 
   }
   // In fn definition
@@ -96,7 +106,5 @@ object DemoCClosure {
   }
 }
 ```
-
-
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

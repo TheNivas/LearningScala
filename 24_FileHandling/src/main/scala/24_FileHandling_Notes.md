@@ -1,18 +1,25 @@
-# D24: File Handling
-* how to handle files 
+# Day 24: File Handling
+
+* how to handle files
 * print statement
 * take input
 * read/write from commandline
 * similar as java with few addition.
 * mostly using java library for this.
 
-### Read from command Line: library `scala.io._`
- #### depracated : <br>
-`var age = Console.readLine()` <br>
-#### instead we can use this: <br>
-`var age = scala.io.StdIn.readLine.toInt` //or <br>
-`var age = scala.io.StdIn.readInt()` <br>
-#### Demo A:
+## Read from command Line: library `scala.io._`
+
+### depracated
+
+`var age = Console.readLine()`  
+
+#### instead we can use this
+
+`var age = scala.io.StdIn.readLine.toInt` //or  
+`var age = scala.io.StdIn.readInt()`  
+
+#### Demo A
+
 ```scala
 //Read from command Line: library scala.io._
 object DemoACommandLine {
@@ -35,7 +42,9 @@ object DemoACommandLine {
   }
 }
 ```
-### Read a text file:
+
+### Read a text file
+
 ```scala
 object DemoBFileRead {
   def main(args: Array[String]): Unit = {
@@ -62,7 +71,9 @@ object DemoBFileRead {
 
 
 ```
+
 ### HOw to write in command-line
+
 ```scala
 object DemoCWriteCommandLine{
   def main(args: Array[String]): Unit = {
@@ -70,7 +81,9 @@ object DemoCWriteCommandLine{
   }
 }
 ```
+
 ### How to write in file
+
 ```scala
 import java.io._
 
@@ -122,20 +135,24 @@ object DemoDFileWrite {
 }
 
 ```
-### Error Handling:
+
+### Error Handling
+
 * in case of filewriter exception comes and handled by try catch block
 * in case of printwriter: use `checkError` method. for error.
+
 ```scala
     println("Error is : " + outWriter1.checkError())//false meaning no error
 ```
+
 | Topic             | FileWriter + BufferedWriter                                      | PrintWriter                                         |
 |-------------------|------------------------------------------------------------------|-----------------------------------------------------|
 | Error Handling    | Try-Catch Block                                                  | `checkError' method                                 |
 | Flushing the Data | Less costly, flush manually or it'll be flush when you close it. | Costly, it flush after data(every byte ) is written |
 | Speed             | Fast                                                             | Slow                                                |
 
+### Read CSV file
 
-### Read CSV file:
 ```scala
 object DemoEReadCSVFile {
   def main(args: Array[String]): Unit = {
@@ -165,9 +182,11 @@ object DemoEReadCSVFile {
   }
 }
 ```
-## Serialization:
 
-Serializing an object means taking the data stored in an object and converting it to bytes (or a string). 
+## Serialization
+
+Serializing an object means taking the data stored in an object and converting it to bytes (or a string).
+
 ```scala
 import java.io.{FileOutputStream, ObjectOutputStream}
 
@@ -188,7 +207,9 @@ object DemoFSerialization extends App{
 }
 
 ```
-## Deserialization:
+
+## Deserialization
+
 Not in mood to study..
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>

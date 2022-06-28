@@ -1,4 +1,5 @@
-# 21: Collection:: Sets
+# Day 21:: Collection: Sets
+
 * collection of pairwise elements
 * can be immutable or mutable
 * immutable: by default
@@ -51,8 +52,11 @@ val res0: Class[? <: Set[String]] = class scala.collection.immutable.HashSet
 scala>
 
 ```
-### Mutable Set
+
+## Mutable Set
+
 ![img1](img1.png)
+
 ```scala
 //creating mutable hashset
 scala> var mutableSet = scala.collection.mutable.Set[String]("India", "US", "Japan")
@@ -69,6 +73,7 @@ val res2: Class[? <: scala.collection.mutable.Set[String]] = class scala.collect
 ```
 
 ![img](img2.png)
+
 ```scala
 //create an immutable set
 scala> var countries = Set("India", "Pakistan", "Bangladesh", "UK", "China", "Russia", "Japan", "North Korea", "Maldeves")
@@ -87,11 +92,13 @@ scala> countries.isEmpty
 val res5: Boolean = false
                                                                                                                                                                                                                    
 ```
-### combine 2 sets into one using ++ method:
+
+### combine 2 sets into one using ++ method
+
 ![img](img3.png)
 
 ```scala
-                                                                                     
+
 scala> var developingCountries = Set("India", "Bangladesh")
 var developingCountries: Set[String] = Set(India, Bangladesh)
                                                                                      
@@ -102,8 +109,11 @@ scala> val allCountries = developedCountries ++ developingCountries
 val allCountries: Set[String] = Set(UK, Japan, India, Bangladesh)
 
 ```
+
 ## Part 4: simple functions on set
+
 ![img](img4.png)
+
 ```scala
 //find min
 scala> allCountries.min
@@ -125,8 +135,11 @@ scala> numberSet.max
 val res9: Int = 67
 
 ```
-### working with duplicates:
+
+### working with duplicates
+
 ![img](img5.png)
+
 ```scala
 scala> var numberSet1 = Set(2,23,67,8,3)
 var numberSet1: Set[Int] = HashSet(2, 3, 67, 23, 8)
@@ -136,19 +149,24 @@ scala> var numberSet2 = Set(2,44,32, 89,58, 32)
 var numberSet2: Set[Int] = HashSet(89, 2, 32, 44, 58)
 
 ```
+
 Note:
+
 1. 32 is two times, but set is collection of unique elements so it ignores the duplicate value.
 2. sequence is not preserved.As data in set is not stored as per index, but it is stored as pair wise (i.e. which elemnt comes behind which element)
 3. HashSet take 5.5 times more memory than ArrayList for storing same number of elements.
 
 **Pairwise Adv and DisAdv**:
+
 * Adv: iteration (eg for loop) operation s more fast for sets as compared to list
 * DisAdv: Random Retrival of elements for set si slower than list (numberSet[1021]: Accessing 1021th element from a set)
 
-### Union and intersection:
+### Union and intersection
+
 1. Common element:
 
 ![common](img6.png)
+
 ```scala
 scala> var numberSet1 = Set(2,44,32, 89,58, 32, 23)
 var numberSet1: Set[Int] = HashSet(89, 2, 32, 44, 23, 58)
@@ -170,9 +188,11 @@ scala> numberSet1.intersect(numberSet2)
 val res4: Set[Int] = HashSet(89, 2, 32, 23)
 
 ```
+
 2. Union:
 
 ![Union](img7.png)
+
 ```scala
 scala> var numberSet1 = Set(2,44,32, 89,58, 32, 23)
 var numberSet1: Set[Int] = HashSet(89, 2, 32, 44, 23, 58)
@@ -195,9 +215,10 @@ val res12: Set[Int] = HashSet(89, 2, 32, 44, 67, 23, 8, 58)
 
 ```
 
-### Mutable Set:
+### Mutable Sets
 
 ![mutableSet](img8.png)
+
 ```scala
 //creating mutable set
 scala> var numberSet = scala.collection.mutable.Set(1,2)
@@ -245,10 +266,13 @@ val res23: scala.collection.mutable.Set[Int] = HashSet(2, 4, 5, 6, 8)
 
 
 ```
-### Contains:
+
+### Contains
+
 contains check if a particular element is present in the set or not
 
 ![contains](img9.png)
+
 ```scala
 scala> var passStudentRoll = Set(1,2,3,4,6,8,9,10,12,15)
 var passStudentRoll: Set[Int] = HashSet(10, 1, 6, 9, 2, 12, 3, 8, 4, 15)
@@ -260,8 +284,10 @@ scala> passStudentRoll.contains(7)
 val res25: Boolean = false
 
 ```
+
 All the methods set contains:
 ![methods](img10.png)
+
 ```scala
 var passStudentRoll = Set(1,2,3,4,6,8,9,10,12,15)
 var passStudentRoll: Set[Int] = HashSet(10, 1, 6, 9, 2, 12, 3, 8, 4, 15)
@@ -284,9 +310,10 @@ SubsetsItr           corresponds          flatMap              head             
 addString            count                flatten              headOption           max                  partitionMap         size                 takeRight            toTraversable
 ```
 
-### hashset and linkedhashSet:
+### hashset and linkedhashSet
 
 ![hash](img11.png)
+
 ```scala
 scala> var passStudentRoll = Set(1,2,3,4,6,8,9,10,12,15)
 ^[[Avar passStudentRoll: Set[Int] = HashSet(10, 1, 6, 9, 2, 12, 3, 8, 4, 15)
@@ -308,12 +335,15 @@ scala> var numberLinkedHashSet = scala.collection.mutable.LinkedHashSet(1,31,14,
 var numberLinkedHashSet: scala.collection.mutable.LinkedHashSet[Int] = LinkedHashSet(1, 31, 14, 45, 325, 82, 20)
 
 ```
+
 ### Queue
+
 * dequeue(): removes the first element from this queue and return it.
-* dequeueFirst(p: (A) => Boolean): returns first element in the queue <br>
+* dequeueFirst(p: (A) => Boolean): returns first element in the queue  
 which satisfies the given predicate and removes the element from the queue
 
 ![Queue](img12.png)
+
 ```scala
 //creating a queue
 scala> var numberQueue = scala.collection.mutable.Queue(1,31,14,45, 325, 82, 20)

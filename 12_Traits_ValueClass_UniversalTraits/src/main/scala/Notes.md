@@ -1,11 +1,12 @@
-# 12 Traits, Value Class and Universal Trait
-# Traits: 
+# Day 12: Traits, Value Class and Universal Trait
+
+## Traits
+
 * Trait encapsulates methods and field definition
 * similar to class
 * keyword is "trait"
 * can't creat an object of trait
 * used only for the purpose of multiple inheritance
-* 
 
 ```scala
 trait  xyz {
@@ -14,12 +15,14 @@ trait  xyz {
 }
 class xyz1 extends xyz // child class: getting all quality of parent
 ```
+
 * in class c1(parent) --extends to -> c2 (child)
+
 ```scala
 class c2 extends  c1
 ```
 
-* in class (c1 and c2) parent  ---> c3 (child) : not possible <br>
+* in class (c1 and c2) parent  ---> c3 (child) : not possible  
 two parent clas is not a possibility
 
 ```scala
@@ -27,11 +30,14 @@ class c3 extends c1 and c2 // not possible
 ```
 
 * but trait can be inherited from two parent trait
+
 ```scala
 trait c3 extends  c1 with c2
 ```
-* Why Traits: to extends multiple traits 
+
+* Why Traits: to extends multiple traits  
 i.e.
+
 ```scala
 trait Car {
   def engine(): Unit = {
@@ -41,8 +47,10 @@ trait Car {
   def breaks()
 }
 ```
-Since wheels and breaks are not defined in the above trait teh child funciton which extneds this trait<br>
+
+Since wheels and breaks are not defined in the above trait teh child funciton which extneds this trait  
 will need to defin these function otherwise it'll give error.
+
 ```scala
 class Mercedes extends  Car {
   def wheel(): Unit = {
@@ -53,10 +61,11 @@ class Mercedes extends  Car {
   }
 }
 ```
-**unimplemented methods in traits should be implemented in class extending given trait.**
-<br>
 
-### Demo A. Trait program:
+**unimplemented methods in traits should be implemented in class extending given trait.**
+
+### Demo A. Trait program
+
 ```scala
 trait Car {                        //keyword : trait
   def engine(): Unit = {           //body is present for engine() method
@@ -88,6 +97,7 @@ object DemoATraits {
 ```
 
 multiple inheritance in scala is like:
+
 ```scala
 trait Vehicle {
   
@@ -99,6 +109,7 @@ class Mercedes extends Vehicle with Car
 ```
 
 Example:
+
 ```scala
 trait FourWheeler{
   def wheel(): Unit = {
@@ -134,16 +145,18 @@ object DemoBTraits {
 }
 
 ```
+
 In above example all different functions are available in different traits/class
-i.e. <br>
+i.e.
+
 * engine() fn is defined in CarB trait
 * wheel() is defined in FourWheeler Trait and
 * breask() is defined in MercedesB class.
 
-<br>
 Since we're extending one trait with other fn defined in them are usable to the child class/trait.
 
 ### What if same function is defined in two traits/classes
+
 ```scala
 trait FourWheeler{
   def wheel(): Unit = {
@@ -162,7 +175,9 @@ trait CarB {                        //keyword : trait
   // so their definition should be implemented in class that is extneding trait Car
 }
 ```
+
 then in the child class we need to override it like...
+
 ```scala
 class MercedesB extends FourWheeler with CarB { // keyword is extend and with
   def breaks(): Unit = {        //unimplemented breaks() method implemented here
@@ -172,13 +187,15 @@ class MercedesB extends FourWheeler with CarB { // keyword is extend and with
   override def wheel(): Unit = super.wheel()
 }
 ```
-Fn that will be referred to is from the trait which comes after "With" <br>
-So OUtput will be:<br>
-Engine is 1000 CC in car<br>
-4 Wheels in car<br>
-Disk Breaks in mercedes<br>
+
+Fn that will be referred to is from the trait which comes after "With"  
+So OUtput will be:  
+Engine is 1000 CC in car  
+4 Wheels in car  
+Disk Breaks in mercedes  
 
 ### Demo B. Trait
+
 ```scala
 trait FourWheeler{
   def wheel(): Unit = {
@@ -215,24 +232,32 @@ object DemoBTraits {
   }
 }
 ```
+
 We can use one more level of abstraction with abstract class. i.e.
+
 ```scala
 abstract class  Vehicle {
   def category()
 
 }
 ```
+
 then we will need to extend child fn like this:
+
 ```scala
 class MercedesC extends Vehicle with FourWheeler with CarC
 ```
-and then we also need to write category function in the MercedesC class, otherwise it'll show error<br>
+
+and then we also need to write category function in the MercedesC class, otherwise it'll show error  
 i.e.
+
 ```scala
   def category(): Unit = {
     println("This is merdedes $$$")
 ```
-### Program:
+
+### Program
+
 ```scala
 abstract class  Vehicle {
   def category()
@@ -279,10 +304,12 @@ object DemoCTraits {
     m1.category()
   }
 }
-``` 
-What if we want to override the funciton i.e.<br>
-if a funciton is already defined in a class/trait and we want to override it/change its' value<br>
+```
+
+What if we want to override the funciton i.e.  
+if a funciton is already defined in a class/trait and we want to override it/change its' value  
 then we need to override it in the child class.(in MerecedesC class in this case)
+
 ```scala
   override def engine(): Unit = {
     println("Engien of Merecedes is 1200 CC")
@@ -292,6 +319,7 @@ then we need to override it in the child class.(in MerecedesC class in this case
 ```
 
 ### Program Demo C
+
 ```scala
 abstract class  Vehicle {   //abstract is keyword for abstract class
   def category() //method category is not implemented
@@ -346,7 +374,9 @@ object DemoCTraits {
   }
 }
 ```
-###  Program demo D
+
+### Program demo D
+
 ```scala
 //written by abc developer, and made it open source
 //note: when u extend carD  , you should also extend FourWheelerD and VehicleD
@@ -382,7 +412,8 @@ object DemoDTraits {
 
 ```
 
-## Value class:
+## Value class
+
 * Value Class: can not allocate runtime object
 * value class always has ONLY 1 Param with type as val
 * you can not extend a value class
@@ -390,13 +421,13 @@ object DemoDTraits {
 * value class can't extend a trait. that's why you've a universal traits.
 * can't define any var in a value class. can only define methods.
 
-### Benefits of value class:
+### Benefits of value class
+
 * LESS initialization
 * better performance
 * less memory usage
-
-
 * Use Case: performance and memory optimization.
+
 ```scala
 // Value Class: can not allocate runtime object
 // value class always has ONLY 1 Param with type as val

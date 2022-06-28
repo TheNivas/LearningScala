@@ -1,8 +1,8 @@
-# 13 Arrays: 1
+# Day 13:: Arrays: 1
 
-Collection of <mark>**same**</mark> datatype
-* index starts with zero always.
-<br>
+Collection of **same** datatype
+
+* index starts with zero always.  
 i.e.
 
 ```scala
@@ -10,23 +10,26 @@ i.e.
 ("abc", "xyz", "ghi") // String Array
 ```
 
-100 variables: <br>
-* array => num(100) <br>
+100 variables:  
 
-* for loop to access the array. <br>
+* array => num(100)  
+* for loop to access the array.  
 
-### Declaration Of Array
+## Declaration Of Array
 
 ```scala
 var num:Array[Int] = new Array[Int](3)
 ```
+
 * num: name of the array
 * Array: Array
 * new : creating a object
 * Array: name of class
 * [Int]: Datatype
 * (3): length of array
-**Or**
+
+### Or
+
 ```scala
 var num = new Array[Int](3)
 num(0) = 25
@@ -34,7 +37,8 @@ num(1) = 22
 num(2) = 54
 ```
 
-### REPL: 
+### REPL
+
 ```scala
 
 scala> var num = new Array[Int](3)
@@ -50,17 +54,21 @@ scala> num
 val res0: Array[Int] = Array(25, 22, 54)
 
 ```
+
 ![img.png](img.png)
-num(3) will out of bound error <br>
+num(3) will out of bound error  
 
 ## Access the Array
+
 ```scala
     var marks = Array(62, 82, 55, 66, 63, 73, 85, 53, 55, 65)
     for (mark <- marks) {   //Accessing the elements of array
       println(mark)
     }
 ```
-### Program: Average of Marks:
+
+### Program: Average of Marks
+
 ```scala
 object DemoAArrays {
   def main(args: Array[String]): Unit = {
@@ -83,50 +91,67 @@ object DemoAArrays {
   }
 }
 ```
-Length of array: array_name.length <br>
+
+Length of array: array_name.length  
 We can do the same in java way
+
 ```scala
 for (i <- 0 to (marks.length - 1)){
   totalMarks += marks(i)
 }
 ```
+
 ## map and foreach
+
 ### Accessing using foreach loop
+
 ```scala
     var marks = Array(62, 82, 55, 66, 63, 73, 85, 53, 55, 65)t
     marks.foreach(println)
 ```
-### Total mark calculations:
+
+### Total mark calculations
+
 ```scala
     var marks = Array(62, 82, 55, 66, 63, 73, 85, 53, 55, 65)t
      var totalMarks = 0
     marks.foreach( mark => totalMarks += mark)
 ```
+
 or we can even shorten the code:
+
 ```scala
     marks.foreach(totalMarks += _)
 ```
+
 Foreach is less code
-### Map:
+
+### Map
+
 always gets multiple outputs.
 i.e.
+
 ```scala
     var newMarks = marks.map(mar k => mark + 10) //or
     var newMarks = marks.map(_ + 10) //shorthand notations
 ```
 
-diff b/w foreach and map:<br>
-foreach: can give you single as well as multiple output, we use fn to each array element <br>
-map: apply map will give multiple output alwasy <br>
+diff b/w foreach and map:
+foreach: can give you single as well as multiple output, we use fn to each array element  
+map: apply map will give multiple output always  
 so foreach is better to use.
-### Why map:
-for operation on each and every element on the array.<br>
-foreach iterates each element one by one <br>
+
+### Why map?
+
+for operation on each and every element on the array.  
+foreach iterates each element one by one  
 but map does it all at once  in parallel and it's very faster than foreach loop.
+
 * if you wanna do same operation on array : Use map you can also use foreach/for loop but it'll be slow.
 * if you want to takea sum/get single output (eg.: totalmarks), use foreach
-* always return an array but if you want for to return array use: yield<br>
+* always return an array but if you want for to return array use: yield
 * below code is not preferred use map instead.
+
 ```scala
     println("manipulating array using for loop instead -> adding 10 to each element:") //but not preferred
     val result = for(mark <- marks) yield {mark + 10}
@@ -134,6 +159,7 @@ but map does it all at once  in parallel and it's very faster than foreach loop.
 ```
 
 ### Demo B Array Program
+
 ```scala
 object DemoBArrays {
   def main(args: Array[String]): Unit = {
@@ -180,13 +206,19 @@ object DemoBArrays {
 }
 
 ```
+
 *****END*****
-# 14 Arrays 2
+
+## 14 Arrays 2
+
 Average computation explained below is not of correct way.just ignore it and focus on the examples.
+
 ## reduceLeft
+
 * gives single output
 * do operation in an array from left
 e.g.
+
 ```scala
 object DemoCArray {
   def main(args: Array[String]): Unit = {
@@ -222,7 +254,9 @@ object DemoCArray {
   }
 }
 ```
-## reduceRight: smae as reduceLeft but from right.
+
+## reduceRight: smae as reduceLeft but from right
+
 ```scala
 object DemoDArray {
   def main(args: Array[String]): Unit = {
@@ -260,13 +294,17 @@ object DemoDArray {
 }
 
 ```
-## Multi-Dimensional Array:
+
+## Multi-Dimensional Array
+
 * to define a multi-dimensinal array we need to import array. i.e.
 
 ```scala
 import Array._
 ```
+
 Eg,
+
 ```scala
 import Array._
 //multi-Dimensional array
@@ -289,7 +327,8 @@ object DemoEArray {
 }
 ```
 
-### Identity matrix:
+### Identity matrix
+
 ```scala
 import Array._
 //multi-Dimensional array
@@ -316,7 +355,9 @@ object DemoEArray {
   }
 }
 ```
+
 scala looop: for i.e
+
 ```scala
     for (row <-0 to 4; column <- 0 to 4){
       if (row == column){
@@ -327,7 +368,9 @@ scala looop: for i.e
       }
     }
 ```
-## Concatenate: 
+
+## Concatenate
+
 ```scala
     var marks1 = Array(5, 7, 6, 7, 8, 9, 10)
     var marks2 = Array(9, 4, 6, 2, 7, 8, 3)
@@ -335,7 +378,9 @@ scala looop: for i.e
     var allMarks = concat(marks1, marks2) //concat is used to combine arrays into one
     allMarks.foreach(println)
 ```
-## Range :
+
+## Range
+
 ```scala
  //var rollNo = Array ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,..............................100 )
 //for that we have range in which end is exclusive
@@ -345,12 +390,16 @@ rollNo.foreach(print) // without space
 println
 rollNo.foreach(x => print(x + " ")) // with space
 ```
+
 **step:**
+
 ```scala
     var evenNo = range(0, 101, 2)
     evenNo.foreach(i => print(i + " "))
 ```
-### Demo concat and range program:
+
+### Demo concat and range program
+
 ```scala
 import Array._
 object DemoFArray {
@@ -375,7 +424,9 @@ object DemoFArray {
   }
 }
 ```
+
 ## Array of Arrays
+
 ```scala
 object DemoGArray {
   def main(args: Array[String]): Unit = {
@@ -391,7 +442,9 @@ object DemoGArray {
   }
 }
 ```
+
 ## ArrayBuffer
+
 ```scala
 import scala.collection.mutable.ArrayBuffer
 //ArrayBuffer
@@ -426,8 +479,8 @@ object DemoHArray {
   }
 }
 ```
+
 Ouptut:
 ![img_1.png](img_1.png)
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
-

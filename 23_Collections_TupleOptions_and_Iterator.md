@@ -1,9 +1,12 @@
-# D 23: Tuples Options and Iterator:
-## Tuples:
+# Day 23: Tuples Options and Iterator
+
+## Tuples
+
 * Fixed no. of elements (1 to 22)
 * immutable
 
 ### A. Define a Tuple
+
 ```scala
 scala> val tuple1 = (2, "String Data", 3.223)
 val tuple1: (Int, String, Double) = (2,String Data,3.223)
@@ -16,11 +19,11 @@ val tuple1: (Int, String, Double, Double) = (2,String Data,3.43,22.3)
                                                                                                                                                                                                                    
 scala> tuple1.getClass
 val res60: Class[? <: (Int, String, Double, Double)] = class scala.Tuple4
-                                                                                                                                                                                                                   
-scala> 
+                                                             
 ```
 
 Note: you can also create a tuple as below:
+
 ```scala
 scala> val tuple1 = new Tuple4(2, "String Data", 3.43,22.3)
 val tuple1: (Int, String, Double, Double) = (2,String Data,3.43,22.3)
@@ -34,7 +37,9 @@ scala> val tuple1 = new Tuple2(2, "String Data", 3.43,22.3)
 1 error found
 
 ```
-### B. Accessing element in tuple:
+
+### B. Accessing element in tuple
+
 ```scala
 scala> tuple1._1 // for first element, it start with 1 not 0
 val res62: Int = 2
@@ -62,13 +67,13 @@ val res67: (String, Int) = (Hello There,1)
 //List of tuples:
 scala> val carList = List(("mercedes", "High Range"), ("BMW", "High Range"), ("Toyota", "Mid Range"), ("jaguar", "High Range"))
 val carList: List[(String, String)] = List((mercedes,High Range), (BMW,High Range), (Toyota,Mid Range), (jaguar,High Range))
-                                                                                                                                                                                                                   
-scala> 
-
+                                                             
 ```
+
 ### Tuple inside list
+
 ```scala
-                                                                                                                                                                                                                  
+                      
 scala> val carList = List(("mercedes", "High Range"), ("BMW", "High Range"), ("Toyota", "Mid Range"), ("Jaguar", "High Range"))
 val carList: List[(String, String)] = List((mercedes,High Range), (BMW,High Range), (Toyota,Mid Range), (Jaguar,High Range))
                                                                                                                                                                                                                    
@@ -79,15 +84,19 @@ scala> carList.foreach{
 Car is jaguar and the range is High Range
 
 ```
+
 Note:Tuple is not used much, instead of tupple most people will use case class.
+
 ```scala
 scala> val student1 = (1, "xyz")
 val student1: (Int, String) = (1,xyz)
 ```
-problem with tuple is its not have much readablity just like above example.<br>
-So iterpreting is very tedious task and less readable.<br>
-For better readability people use case class.<br>
+
+problem with tuple is its not have much readablity just like above example.  
+So iterpreting is very tedious task and less readable.  
+For better readability people use case class.  
 i.e.:
+
 ```scala
 //option 1: usidng a tuple, no code readability .Next person doesn't know "abc" and "xyz" is what????
 scala> val student1 = (1, "abc", "xyz")
@@ -96,20 +105,23 @@ val student1: (Int, String, String) = (1,abc,xyz)
 //using a case class. Good code readablity.
 scala> case class Student(rollNo: Int, firstNmae: String, lastName: String)
 // defined case class Student
-                                                                                                                                                                                                                   
-                                                                                                                                                                                                    
+                                                                                                                                
 scala> val student1 = Student(1, "abc", "xyz")
 val student1: Student = Student(1,abc,xyz)
-                                                                                                                                                                                                                   
+
 ```
+
 above both are performing same task but case class is more readable.
 
-## Options:  
+## Options
+
 * similar to HashMap in java, gives value or Null
 * `options[T] => some[T] or None`
-#### A. Define:
+
+### A. Define
+
 ```scala
-                                                                                                                                                                                                                   
+
 scala> val option1: Option[Int] = Some(10)
 val option1: Option[Int] = Some(10)
                                                                                                                                                                                                                    
@@ -140,14 +152,16 @@ scala> option1 = None
 option1: Option[Int] = None
                                                                                                                                                                                                                    
 ```
-When option is defined as Int i.e. `option1` it is able to changed to NOne ,<br>
-but if we define it without Int i.e. `option2` it is not changing to none.. Why??
-<br> bcz it is defined as some by default and when we try to change that it's still some,<br>
+
+When option is defined as Int i.e. `option1` it is able to changed to NOne,  
+but if we define it without Int i.e. `option2` it is not changing to none.. Why??,  
+ bcz it is defined as some by default and when we try to change that it's still some,  
 so we can change value from to some(a) to some(b) but can't change it to none.
+
 ```scala
-                                                                                                                                                                                                                   
+                        
 scala> //if defined directly
-                                                                                                                                                                                                                   
+
 scala> val option2 = Some(10)
 val option2: Some[Int] = Some(10)
                                                                                                                                                                                                                    
@@ -164,10 +178,11 @@ scala> //Why give error????
                                                                                                                                                                                                                    
 scala> val option2 = Some(5)
 val option2: Some[Int] = Some(5)
-                                                                                                                                                                                                                   
-scala>
+                                                                                                                                                                                       
 ```
-#### b. isEmpty method:
+
+#### b. isEmpty method
+
 ```scala
                                                                                                                                                                                                                    
 scala> var option1: Option[Int] = Some(10)
@@ -183,7 +198,9 @@ scala> option1.isEmpty
 val res10: Boolean = true
 
 ```
+
 #### C. Get method
+
 ```scala
 scala> var cars  = Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
 var cars: Map[String, String] = Map(Mercedes -> High Range, BMW -> High Range, Toyota -> Mid Range, Jaguar -> High Range)
@@ -204,7 +221,9 @@ at scala.collection.immutable.Map$Map4.apply(Map.scala:517)
 ... 30 elided
 
 ```
+
 #### D. to remove Some and None
+
 ```scala
 scala> var cars  = Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
 var cars: Map[String, String] = Map(Mercedes -> High Range, BMW -> High Range, Toyota -> Mid Range, Jaguar -> High Range)
@@ -225,7 +244,9 @@ scala> removeSome(cars.get("Nano"))
 val res17: String = Not Found
          
 ```
-#### E. get will give error if option is defined as `None` bcz it doesn't have any method, but if it was some then it will retrieve the element.
+
+#### E. get will give error if option is defined as `None` bcz it doesn't have any method, but if it was some then it will retrieve the element
+
 ```scala
 scala> var option1: Option[Int] = None
 var option1: Option[Int] = None
@@ -239,6 +260,7 @@ java.util.NoSuchElementException: None.get
 ```
 
 #### F. instead of get you can use getOrElse()
+
 ```scala
 scala> var option1: Option[Int] = None
 var option1: Option[Int] = None
@@ -260,10 +282,11 @@ val res23: Int = 101
                                                                                                                                                                                                                    
 ```
 
-## Iterator:
+## Iterator
+
 * not a collection
 * parent have methods to give access/iterate over the elements inside the collection
-* Next -> gives next element. 
+* Next -> gives next element.
 * hasNext -> checks if next element is present
 
 ```scala
@@ -342,7 +365,8 @@ scala> //return false,  so don't use next method
 
 ```
 
-#### isEmpty in iterator:
+### isEmpty in iterator
+
 ```scala
 scala> var iterator1 = Iterator("Hello", "Hi", "Ciao", "Bonjour", "Namaste")
 var iterator1: Iterator[String] = <iterator>
@@ -386,7 +410,9 @@ scala> iterator1.length
 val res50: Int = 5
 
 ```
+
 #### Buffered iterator: store some data in memory
+
 ```scala
 scala> var iterator1 = Iterator("Hello", "Hi", "Ciao", "Bonjour", "Namaste")
 var iterator1: Iterator[String] = <iterator>
@@ -418,7 +444,9 @@ scala> bufferedIterator1.tail
 scala> //ha ha not a fn here
  
 ```
-#### duplicate method: store 2 iterator of same data:
+
+#### duplicate method: store 2 iterator of same data
+
 ```scala
                                                                                                                                                                                                                    
 scala> var iterator1 = Iterator("Hello", "Hi", "Ciao", "Bonjour", "Namaste").duplicate

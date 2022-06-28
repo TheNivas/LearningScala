@@ -1,22 +1,28 @@
-# Functional Programming - 1
-## Functions:
-Group of statements for perfoming specific task.
-<br>i.e.<br>
-age (dob, year) <br>
-premium (age, sum_assured) <br>
+# Day 15: Functional Programming - 1
 
-## Methods and function:
-**method: defined in a class; have names, signature, bytecode.<br>**
+## Functions
+
+Group of statements for perfoming specific task.  
+i.e.  
+age (dob, year)  
+premium (age, sum_assured)  
+
+## Methods and function
+
+**method: defined in a class; have names, signature, bytecode**  
 **function: independent of class; may or may not have name,i.e. +, -, etc**
 
-## Function Definition:
+## Function Definition
+
 ```scala
 def functionName([arguments/params]): [return Type] = {
     function body
     return [variable]
 }
 ```
+
 Example: DemoAFunctions.scala
+
 ```scala
 object DemoAFucntions {
 
@@ -30,8 +36,11 @@ object DemoAFucntions {
   }
 }
 ```
-### Example: Functions with named args<br> 
+
+### Example: Functions with named args
+
 DemoBFunctionWithNamedArgs.scala
+
 ```scala
 object DemoBFunctionWithNamedArgs {
   def sum(x: Int, y: Int): Int = {
@@ -48,12 +57,16 @@ object DemoBFunctionWithNamedArgs {
 ```
 
 ### Example 3: variable numbers of arguments
-DemoCVariableNumberOfArgs.scala
-* String* means Array[String], same goes for int array: Array[Int] = Int*
 
-#### Notes:
+DemoCVariableNumberOfArgs.scala
+
+  *String**  means Array[String], same goes for int array: Array[Int] = Int*
+
+#### Notes
+
 1. vaiable number args. i.e. String* should always be at the end/should be the last param
-2.  you can not have more than one * means only one variable length variable.
+2. you can not have more than one * means only one variable length variable.
+
 ```scala
 //variable number of args in a function
 object DemoCVariableNumberOfArgs {
@@ -70,6 +83,7 @@ object DemoCVariableNumberOfArgs {
 ```
 
 ### Example 4: DemoDDefaultParameter.scala
+
 ```scala
 //Default parameter value
 object DemoDDefaultParameter {
@@ -93,8 +107,10 @@ object DemoDDefaultParameter {
     println(Division(y = 3))  //x = default value 5 and y = 3 ou
   }
 }
-``` 
+```
+
 ### Example 5:DemoERecursiveFunction.scala
+
 ```scala
 object DemoERecursiveFunction {
   def factorial(n: Int):Int = {
@@ -119,10 +135,13 @@ object DemoERecursiveFunction {
   }
 }
 ```
+
 <h2 align="center"><sub>*** </sub>End<sub> ***</sub></h2>
 
-# Functional Programming - 2
-### Example 1: Anonymous Function: lambda fn in another language 
+## Day 16: Functional Programming - 2
+
+### Example 1: Anonymous Function: lambda fn in another language
+
 * function without a name and def keyword.
 * support first class function... Pass fn as param and define fn values.
 
@@ -164,7 +183,9 @@ object DemoFAnonymousFunction {
   var sum = (x: Int, y: Int) => x + y
 }
 ```
+
 ### Example 2:  Anonymous function
+
 ```scala
 object DemoGAnonymousFunctions {
   def main(args: Array[String]): Unit = {
@@ -188,7 +209,9 @@ object DemoGAnonymousFunctions {
   
 }
 ```
+
 ### Example 3: Anonymous function
+
 ```scala
 object DemoHAnonymousFunction {
   def main(args: Array[String]): Unit = {
@@ -212,8 +235,11 @@ object DemoHAnonymousFunction {
 }
 
 ```
+
 ## Book: Learning Scala by jason Swartz
+
 ### Example: 4
+
 ```scala
 // function call by name.
 object DemoICallByName {
@@ -233,7 +259,9 @@ object DemoICallByName {
   }
 }
 ```
-### Example:5 passing fn with param to another function.
+
+### Example:5 passing fn with param to another function
+
 ```scala
 // function call by name.
 object DemoJFunctionCallByName
@@ -260,7 +288,9 @@ object DemoJFunctionCallByName
   }
 }
 ```
-### Example 6 :
+
+### Example 6
+
 ```scala
 object DemoKFunctionCallByName
 {
@@ -284,9 +314,10 @@ object DemoKFunctionCallByName
 }
 
 ```
+
 <h2 align="center"><sub>*** </sub>End<sub> ***</sub></h2>
 
-# Functional Programming - 3
+## Day 17: Functional Programming - 3
 
 ```scala
 object DemoLFunctionByValue {
@@ -308,12 +339,15 @@ object DemoLFunctionByValue {
 }
 
 ```
+
 Points to remember:
-* it will execute the  inside fn "(time())" first then execute the <br> outside fn "exec()"
+
+* it will execute the  inside fn "(time())" first then execute the  outside fn "exec()"
 * since inside fn "time()" get executed first, it calls outside fn "exec()" with the return value of time() as a parameter of "exec()" i.e. **exec(79512772974462)**
-*  it is called **fn by value**
+* it is called **fn by value**
 
 Example 2:
+
 ```scala
 object DemoMFunctionByName {
     def main(args: Array[String]): Unit = {
@@ -335,11 +369,14 @@ object DemoMFunctionByName {
 }
 
 ```
+
 Points to remember:
+
 * it will first execute the outside fn "exec()" and then execute the inside fn "time()" every time t is being referred.
 * since outside fn "exec()"  got executed first, it calls Inside fn "time()" using the reference variable t, it is called as **fn by Value**
 
-##### Example :3A : Partially implemented fn:
+### Example :3A : Partially implemented fn
+
 ```scala
 //Note : without partially applied fn:
 import java.util.Date
@@ -364,6 +401,7 @@ object DemoNPartiallyAppliedFunction {
 ```
 
 ### Example :3B: both doing the same thing but using partially inplementd fn
+
 ```scala
 //Note :  partially implemented fn:
 import java.util.Date
@@ -387,7 +425,9 @@ object DemoNPartiallyAppliedFunction {
   }
 }
 ```
+
 ### Example 4: Partially implemented fn: 2
+
 ```scala
 //Note :  partially implemented fn: 2
 object DemoOPartiallyAppliedFunction {
@@ -417,7 +457,9 @@ object DemoOPartiallyAppliedFunction {
 }
 
 ```
-### Example 5: Nested fn:
+
+### Example 5: Nested fn
+
 ```scala
 object DemoPNestedFunction {
   def main(args: Array[String]): Unit = {
@@ -436,7 +478,9 @@ object DemoPNestedFunction {
 }
 
 ```
+
 ### Exaample 6: Nested Function 2
+
 ```scala
 object DemoQNestedFunction {
   def main(args: Array[String]): Unit = {
@@ -458,6 +502,7 @@ object DemoQNestedFunction {
 ```
 
 ### Example 7:nNested fn 3
+
 ```scala
 object DemoRNestedFunction {
   def main(args: Array[String]): Unit = {
@@ -479,8 +524,10 @@ object DemoRNestedFunction {
 }
 ```
 
-### Example 8: Scurrying fn:
+### Example 8: Scurrying fn
+
 * instead of passing multiple parameter separated with commas, simply pass multiple params in separate bracket.
+  
 ```scala
 object DemoSScurryFunction {
   def main(args: Array[String]): Unit = {
@@ -511,7 +558,9 @@ object DemoSScurryFunction {
 }
 
 ```
-### Example 9:
+
+### Example 9
+
 ```scala
 object DemoRScurryingFuncionWithPartiallyAppliedFn {
 //currying fn decoration
@@ -524,10 +573,9 @@ object DemoRScurryingFuncionWithPartiallyAppliedFn {
 }
 
 ```
-##### Functioning chaining(result you get is chian of fn)
+
+#### Functioning chaining(result you get is chian of fn)
+
 = fn currying (separate params in diff bracket) + partially applied fn (i.e. use _)
 
-
-
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
-

@@ -1,21 +1,24 @@
-# Singleton Object , companion classes and objects and cases classes and O
-in scala we write main fn in object.
-<br>
+# Day 6: Singleton Object , companion classes and objects and cases classes and O
+
+in scala we write main fn in object.  
+
 * scala:
   * class
   * object
 
 * New >> Scala Class >> Demo(object) then main fn
+
 ```scala
 def main(args: Array[String]): Unit = {
 //........
 }
 ```
 
-Reason to write in obj is : in java main fn is like public static void main,<br>
+Reason to write in obj is : in java main fn is like public static void main,  
 but in scala **static** isn't a keyword and object is static by default, so we write main in obj.
 
-## Singleton Object:
+## Singleton Object
+
 ```scala
 object employee {
   val x = 2
@@ -31,7 +34,9 @@ object classDemo {
   }
 }
 ```
-Eg.
+
+### Demo 1
+
 ```scala
 class DemoClassA {
   val x = 2
@@ -49,7 +54,9 @@ object singletonDemo {
   }
 }
 ```
-#### Demo 2
+
+### Demo 2
+
 ```scala
 object DemoObjectB { // 1st note: instead of class, this is object
   val x = 2
@@ -68,12 +75,15 @@ object SingletonDemoB {
   }
 }
 ```
+
 while creating new instance we can use var instead of val so we can change the value in case we need it.
-<br>
+
 ```scala
 var demoObjectB1 = new DemoClassA
 ```
+
 eg:
+
 ```scala
 class DemoClassC(a: Int, b: Double) {
   val x = a
@@ -100,10 +110,14 @@ object singletonDemoC {
   }
 }
 ```
-if you're creating only one object, its called singleton object.<br>
+
+if you're creating only one object, its called singleton object.  
 when compiled using scalac **scalac abc.scala** it creates class file
+
 * val or var must be before an variable or immutable type.
+
 #### Behind the scene
+
 * got to the folder of source file
 * scalac SingleTonDemoA.scala //compiles and create class
 * once compiled it creates 2 class file i.e. one for object and one for class.
@@ -114,9 +128,11 @@ when compiled using scalac **scalac abc.scala** it creates class file
 * or cavaj DemoObjectA
 
 ## companion class and object
+
 * Basically name of class and object are same.
 * can use var of class in obj and var of obj in class.
 * can use var/method defined in class in obj and vice-versa.
+
 ```scala
 class name {
   ....
@@ -127,7 +143,9 @@ object name {
   .....
 }
 ```
+
 Eg.
+
 ```scala
 class comapnionDemo {
 var x = 5
@@ -146,14 +164,18 @@ object comapnionDemo {
   }
 }
 ```
-In singleton object it automatically creates a class of that object. <br>
+
+In singleton object it automatically creates a class of that object.  
 companion class and obj: make var/method use interchangeably.
 
-## case Class:
+## case Class
+
 1. no need to write new cuz apply method is auto generated in case class.
-2. constructor paramter is val by default, therefore mutator method(method to overwrite a value)<br>
+2. constructor paramter is val by default, therefore mutator method(method to overwrite a value)  
 is not generated and hence you can't change the name.
+
 e.g.
+
 ```scala
 case class Car(var name: String, model: String)
 {
@@ -198,6 +220,5 @@ object caseClassDemo{
 }
 
 ```
-
 
 <h2 align="center"><sub>***</sub> End <sub>***</sub></h2>

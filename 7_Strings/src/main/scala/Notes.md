@@ -1,21 +1,29 @@
-# 7 Strings
+# Day 7: Strings
+
 collection of characters or numbers.
+
 ```scala
 val greetings1 = "Hello World !"
 val greetings2: String = "Hello India !"
 ```
-intelliJ shortcut for main: "main" + "(ctrl + space + Enter) or Tab <br>
-### Method of length of the string: .length() <br>
+
+intelliJ shortcut for main: "main" + "(ctrl + space + Enter) or Tab  
+
+## Method of length of the string: .length()
+
 i.e.
+
 ```scala
 val greetings1 = "Hello World !"
 var lengthOfString = greetings1.length() //13
 ```
 
-## Accessor Method:
-Any method used to get info of an obj is called Accessor method.<br>
+## Accessor Method
 
-### Concat method:
+Any method used to get info of an obj is called Accessor method.  
+
+### Concat method
+
 ```scala
 var var1  = "Hello "
 var var2 = "World"
@@ -23,13 +31,16 @@ println(var1 + var2) // or
 println(var1.concat(var2))
 ```
 
-### charAt( ) method:
+### charAt( ) method
+
 ```scala
 var var3 = var1 + var2 +"!"
 //charAt fn:to get char at given index
 println("charAt index 6:" + var3.charAt(6))
 ```
-### Equals method:
+
+### Equals method
+
 ```scala
     var varA = "Hello World"
     var varB = "Hello World"
@@ -41,7 +52,8 @@ println("charAt index 6:" + var3.charAt(6))
     println("isempty fn: " + varA.isEmpty)
 ```
 
-### String formatting:
+### String formatting
+
 ```scala
 //string formatting
     var nameOfCar = "Mercedes"
@@ -50,7 +62,8 @@ println("charAt index 6:" + var3.charAt(6))
     printf("name of the car is %s, cost of the car is %d and mileage of the car is %f", nameOfCar, costOfCar, mileageOfCar)
 ```
 
-### Multi Line String:
+### Multi Line String
+
 ```scala
 
     //multiLIne string
@@ -85,7 +98,8 @@ println("charAt index 6:" + var3.charAt(6))
     println(multiLineStringB)
 ```
 
-### String interpolation:
+### String interpolation
+
 ```scala
     //string interpolation
     //1. 's' interpolator
@@ -104,6 +118,7 @@ println("charAt index 6:" + var3.charAt(6))
 ```
 
 Go through scala string method online.
+
 ```scala
 OUTPUT:
 /*

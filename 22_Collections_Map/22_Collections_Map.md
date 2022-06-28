@@ -1,4 +1,5 @@
-# D 22: Collections:: Map
+# Day 22:: Collections: Map
+
 * `{key : Value, Key: Value, K:V,.......}`
 * Key must be unique
 * can be mutable as well as immutable
@@ -9,6 +10,7 @@
 * can have duplicate value but not keys.
 
 ![example](img.png)
+
 ```scala
 //creating a map
 scala> var cars = Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End", "Nano" -> "Low-End")
@@ -34,14 +36,19 @@ scala> cars1 += ("Suzuki" -> "Mid-End")
 1 error found
 
 ```
-## Mutable Map:
+
+## Mutable Map
+
 in mutable map adding an element is not a problem in var as well as val.
-#### reason is
+
+### reason is
+
 1. `+=` operator behaves differently in `scala.collection.immutable.Map` and `scala.collection.mutable.Map`
 2. in immutable Map, `+=` operator (method) will return a new Map object, and new object can only be saved if the object is of type var
 3. in mutable Map, `+=` method will modify the existing map object, hence it will work on both var and val.
 
 ![mutableMap](img1.png)
+
 ```scala
 // mutable map as var
 scala> var cars3 = scala.collection.mutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End", "Nano" -> "Low-End")
@@ -58,8 +65,11 @@ scala> cars2 += ("Suzuki" -> "Mid-End")
 val res2: scala.collection.mutable.Map[String, String] = HashMap(Nano -> Low-End, Toyota -> Mid-Range, Suzuki -> Mid-End, Mercedes -> High-End, BMW -> High-End, jaguar -> High-End)
 
 ```
-### some methods:
+
+### some methods
+
 ![method](img2.png)
+
 ```scala
 scala> var cars3 = scala.collection.mutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End", "Nano" -> "Low-End")
 ^[[Avar cars3: scala.collection.mutable.Map[String, String] = HashMap(Nano -> Low-End, Mercedes -> High-End, Toyota -> Mid-Range, BMW -> High-End, jaguar -> High-End)
@@ -88,8 +98,11 @@ scala> cars3.max
 val res5: (String, String) = (jaguar,High-End)
 
 ```
+
 ### EmptyMap
+
 ![emptyMap](img3.png)
+
 ```scala
 //create an empty map()
 scala> var emptyMap = Map()
@@ -117,7 +130,9 @@ val res8: Map[String, String] = Map(a -> aaaaa)
 scala> emptyMap.isEmpty
 val res9: Boolean = false
 ```
+
 ![carsExample](img5.png)
+
 ```scala
 scala> var cars3 = scala.collection.mutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End", "Nano" -> "Low-End")
 var cars3: scala.collection.mutable.Map[String, String] = HashMap(Nano -> Low-End, Mercedes -> High-End, Toyota -> Mid-Range, BMW -> High-End, jaguar -> High-End)
@@ -133,13 +148,15 @@ val res12: scala.collection.mutable.Map[String, String] = HashMap(Mercedes -> Hi
 
 ```
 
-### Removing from map:
+### Removing from map
+
 * works for both `var` and `val` in case of mutable map.
 * -= operator(method) in case of mutable, modifies the existing map/data structure.
 * in immutable map it only works for `var`
 * -= operator(method) in case of immutable, returns the new map/data structure and to re-allocate teh object, only with var.
 
 ![removing](img6.png)
+
 ```scala
 
 scala> var cars3 = scala.collection.mutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End", "Nano" -> "Low-End")
@@ -182,11 +199,13 @@ scala> cars3
 val res14: Map[String, String] = HashMap(Mercedes -> High-End, Nano -> Low-End, Suzuki -> Mid-End, BMW -> High-End, jaguar -> High-End)
 
 ```
-### Removing element:
+
+### Removing element
+
 ![removal](img7.png)
 
 ```scala
-                                                                                                                                                                                                                   
+
 scala> var cars = scala.collection.immutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End")
 var cars: Map[String, String] = Map(Mercedes -> High-End, BMW -> High-End, Toyota -> Mid-Range, jaguar -> High-End)
             
@@ -210,8 +229,11 @@ scala> cars
 val res18: Map[String, String] = Map(jaguar -> High-End)
 
 ```
-### method available for immutable map:
+
+### method available for immutable map
+
 ![methods](img8.png)
+
 ```scala
                                                                                                                                                                                                                    
 scala> cars.
@@ -235,9 +257,11 @@ apply                dropWhile            foreach              isEmpty          
 
 
 ```
+
 put a new elemnt using put method (put method is only availlable in mutable map because mutable map can add/modify)
 
 ![put](img9.png)
+
 ```scala
                                                                                                                                                                                                                  
 scala> var cars = scala.collection.immutable.Map("Mercedes"-> "High-End", "BMW"-> "High-End", "Toyota" -> "Mid-Range", "jaguar"-> "High-End")
@@ -278,7 +302,9 @@ scala> cars.remove("a")
 val res22: Option[String] = None
          
 ```
-### methods for mutable map:
+
+### methods for mutable map
+
 ![mthods](img10.png)
 
 ```scala
@@ -305,8 +331,11 @@ addOne               count                foldLeft             inits            
 addString            default              foldRight            isDefinedAt          mapValuesInPlace     put                  sizeHint             toArray              updateWith
 
 ```
-### get method:
+
+### get method
+
 ![get](img11.png)
+
 ```scala
 //if found:                                                                                                                                                                                                                   
 scala> cars.get("Mercedes")
@@ -331,8 +360,10 @@ at scala.collection.mutable.HashMap.apply(HashMap.scala:425)
 
 ```
 
-### combining 2 maps together:
+### combining 2 maps together
+
 ![combine](img12.png)
+
 ```scala
 scala> var HighEndCar = Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range")
 var HighEndCar: Map[String, String] = Map(Mercedes -> High Range, BMW -> High Range, Toyota -> Mid Range)
@@ -352,8 +383,11 @@ var cars: Map[String, String] = HashMap(Toyota -> Mid Range, Mercedes -> High Ra
 scala> 
 
 ```
-### Accessing elements in a map:
+
+### Accessing elements in a map
+
 ![accessing](img13.png)
+
 ```scala
 //car map:
 scala> cars
@@ -408,7 +442,9 @@ Key is Toyota and value is Mid Range
 scala> 
 
 ```
-### to check if a given key or value is present in a map or not:
+
+### to check if a given key or value is present in a map or not
+
 ```scala
 //check if toyota exists
 scala> cars.contains("Toyota")
@@ -432,6 +468,7 @@ val res34: Boolean = true
 ```
 
 if data is not found then instead of throwing error it can return the default value if it is set>
+
 ```scala
                                                                                                                                                                                                                    
 scala> val cars  = scala.collection.mutable.Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range").withDefaultValue("Null")
@@ -443,11 +480,13 @@ val res37: String = High Range
 //if element is not found
 scala> cars("mercedes")
 val res36: String = Null
-                                                                                                                                                                                                                   
+
 
 ```
+
 what if default value is not provided but we still want default value when elemtn is not found.
-we use `getOrElse` method in this case 
+we use `getOrElse` method in this case
+
 ```scala
                                                                                                                                                                                                                    
 scala> val cars  = scala.collection.mutable.Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
@@ -470,11 +509,15 @@ scala> cars.getOrElse("saare jaha se accha", "i'm not able to get -NULL")
 val res40: String = i'm not able to get -NULL
  
 ```
-![getOrElse](img14.png)<br>
-### some operation on map:
+
+![getOrElse](img14.png)  
+
+### some operation on map
+
 #### Transform method to convert type of the value only works with mutable map
+
 ```scala
-                                                                                                                                                                                                            
+
 scala> val cars  = scala.collection.mutable.Map("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
 val cars: scala.collection.mutable.Map[String, String] = HashMap(Jaguar -> High Range, Mercedes -> High Range, Toyota -> Mid Range, BMW -> High Range)
                                                                                                                                                                                                                    
@@ -483,8 +526,11 @@ there were 1 deprecation warning(s); re-run with -deprecation for details
 val res48: scala.collection.mutable.Map[String, String] = HashMap(Jaguar -> 10, Mercedes -> 10, Toyota -> 9, BMW -> 10)
 
 ```
+
 #### Listmap: preserve the sequence of the insertion., insert element at top
+
 ![listmap](img15.png)
+
 ```scala
 //listmap
 scala> val cars  = scala.collection.immutable.ListMap("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
@@ -504,8 +550,11 @@ there were 1 deprecation warning(s); re-run with -deprecation for details
 val cars: scala.collection.mutable.ListMap[String, String] = ListMap(Jaguar -> High Range, BMW -> High Range, Mercedes -> High Range, Toyota -> Mid Range)
 
 ```
-### linkedHashMap: preserves the sequence of insertion and appends at the end.
+
+### linkedHashMap: preserves the sequence of insertion and appends at the end
+
 ![linkedhashmap](img16.png)
+
 ```scala
 scala> var cars  = scala.collection.mutable.LinkedHashMap("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
 var cars: scala.collection.mutable.LinkedHashMap[String, String] = LinkedHashMap(Mercedes -> High Range, BMW -> High Range, Toyota -> Mid Range, Jaguar -> High Range)
@@ -517,7 +566,9 @@ scala> cars += ("3" -> "Three")
 val res54: scala.collection.mutable.LinkedHashMap[String, String] = LinkedHashMap(Mercedes -> High Range, BMW -> High Range, Toyota -> Mid Range, Jaguar -> High Range, 1 -> One, 3 -> Three)
 
 ```
+
 * HashMap : where data stored as hashes, sequence is not preserved.
+
 ```scala
                                                                                                                                                                                                                
 scala> var cars  = scala.collection.mutable.HashMap("Mercedes" -> "High Range", "BMW" -> "High Range", "Toyota" -> "Mid Range", "Jaguar" -> "High Range")
@@ -534,6 +585,7 @@ val res57: Class[? <: scala.collection.mutable.HashMap[String, String]] = class 
 
 
 ```
-![hashandlisthash](img17.png) 
+
+![hashandlisthash](img17.png)  
 
 <h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
