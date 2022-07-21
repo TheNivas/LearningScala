@@ -10,9 +10,9 @@
 5. [Constructor](./5_ConstructorDemo/src/main/scala/Notes.md)
 6. [Singleton object, Compaignion Classes and Objects and Case Classes and O](./6_SingletonDemo/src/main/scala/Notes.md)
 7. [Strings](./7_Strings/src/main/scala/Notes.md)
-8. [Pattern Matching and Regex](8%20Pattern%20matching%20and%20Regex.odt)
+8. [Pattern Matching and Regex](./8%20Pattern%20Matching%20and%20RegEx/Day%208%3A%20Pattern%20Matching%20and%20RegEx.md)
 9. :  
-   9A. [Implicit class](9A%20Implicit%20Class.odt)  
+   9A. [Implicit class](./9A%20Implicit%20Class/9A%20Implicit%20Class.md)  
    9B. [Conditional Statements and Loops](./9B_Conditional_Statement_and_Loops/src/main/scala/Notes.md)
 10. [Packages and Import](./10_Packages_and_import/src/main/scala/Notes.md)
 11. [Exception Handling](./11_Exception_Handling/src/main/scala/Notes.md)
@@ -32,5 +32,4 @@
 23. [Collections: Tuples Options and Iterator](23_Collections_TupleOptions_and_Iterator.md)
 24. [File Handling](./24_FileHandling/src/main/scala/24_FileHandling_Notes.md)
 
-
-<h2 align="center"><sub>*** </sub> End <sub>***</sub></h2>
+***
