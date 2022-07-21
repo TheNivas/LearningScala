@@ -311,7 +311,7 @@ println(bmw.roadTax) //200
 * Private: can access only in the defined class
 * protected: can access in the class where it is defined as well as in subclas extending the given class using inheritence.
 
-In the last example we only able to change/overwrite the roadTax, because it wa s public if it was private or protected then we wouldn't be able to do so.
+In the last example we only able to change/overwrite the roadTax, because it was public if it was private or protected then we wouldn't be able to do so.
 
 ```scala
 //class and object demo
@@ -368,8 +368,8 @@ object carExample {
     println("total tax on BMW: " + bmw.checkTax())
 
     var z = new Car
-    println("extra cost of z:" + z.topClassExtraCost)
-    println("total tax on z: " + bmw.checkTax())
+    println("extra cost of z:" + z.topClassExtraCost) //0
+    println("total tax on z: " + z.checkTax()) // 10
   }
 }
 
