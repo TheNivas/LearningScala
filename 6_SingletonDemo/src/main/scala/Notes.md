@@ -158,7 +158,7 @@ object comapnionDemo {
 
   def main(args: Array[String]): Unit = {
     val objectForCompanionDemoClass = new comapnionDemo()
-    println(s"value of x retrieved from companion obj is ${objectForCompanionDemoClass.x}")
+    println(s"value of x retrieved from companion class is ${objectForCompanionDemoClass.x}")
     println(s"value of y when retrieved from companion obj is ${y}")
     objectForCompanionDemoClass.getValue()
   }
